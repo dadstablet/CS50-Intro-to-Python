@@ -1,2 +1,3 @@
-x = input("input here ")
-x.replace(" ","...")
+x = input()
+dots = x.replace(" ","...")
+print(x.replace)
