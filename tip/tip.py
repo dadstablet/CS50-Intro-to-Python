@@ -11,7 +11,9 @@ def dollars_to_float(d):
 
 
 def percent_to_float(p):
-    # TODO
-
+    remove_p = p.rstrip("%")
+    fl_remove_p = float(remove_p)
+    final = fl_remove_p/100
+    return final
 
 main()
