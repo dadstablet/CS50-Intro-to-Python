@@ -1,5 +1,5 @@
 m = input("m: ")
 c = 300000000
-e = input("E: ")
+e = c*m
 
-print(m, e)
+print("E: ",e)
