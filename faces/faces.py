@@ -1,2 +1,5 @@
-def convert(x=input()):
+def convert():
+    x=input()
+    print(x)
     
+convert()
