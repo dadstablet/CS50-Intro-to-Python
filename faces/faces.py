@@ -1,8 +1,2 @@
-def convert():
+def convert(x=input()):
     
-
-def main():
-    x = input("Input here: ")
-    conv = convert(x)
-
-main()
