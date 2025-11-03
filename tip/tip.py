@@ -6,8 +6,8 @@ def main():
 
 
 def dollars_to_float(d):
-    lstrip(d)
-
+    remove_d = d.lstrip("$")
+    return float(remove_d)
 
 
 def percent_to_float(p):
