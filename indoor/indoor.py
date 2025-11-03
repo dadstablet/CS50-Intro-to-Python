@@ -1,3 +1,3 @@
-print('HELLO')
 x = input()
-print(lower(x))
+x_lower = x.lower()
+print(x_lower)
