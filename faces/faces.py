@@ -1,6 +1,5 @@
-def convert(str):
-    smile = str.replace(":)", "🙂")
-    frown = str.replace(":(", "🙁")
+def convert():
+    
 
 def main():
     x = input("Input here: ")
