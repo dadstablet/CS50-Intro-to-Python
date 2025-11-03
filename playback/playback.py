@@ -1,4 +1,2 @@
-print("HELLO?")
-x = input
-
+x = input("input here ")
 print(x, sep="...")
