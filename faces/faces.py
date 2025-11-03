@@ -5,6 +5,7 @@ def convert(x):
 
 def main():
     poop = input()
-    print(convert.poop)
+    pee = convert(poop)
+    print(pee)
 
 main()
