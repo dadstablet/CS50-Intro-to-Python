@@ -1,6 +1,5 @@
-x = input("type here: ")
 
-def convert():
+def convert(str):
     
 
 # def main(convert):
