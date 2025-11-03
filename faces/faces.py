@@ -4,8 +4,8 @@ def convert(x):
     print(step_2)
 
 def main():
-    poop = input()
-    pee = convert(poop)
-    print(pee)
+    text = input()
+    conv_text = convert(text)
+    print(text)
 
 main()
