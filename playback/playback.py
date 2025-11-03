@@ -1,2 +1,5 @@
-x = input("input here ")
-print(x, sep="...")
+# x = input("input here ")
+# print(x, sep="...")
+
+def hello(x):
+    
