@@ -1,5 +1,2 @@
-# x = input("input here ")
-# print(x, sep="...")
-
-def hello(x):
-    
+x = input("input here ")
+x.replace(" ","...")
