@@ -1,3 +1,2 @@
-def main():
-    x = input()
-    convert(":)",)
+def main(convert):
+    convert = input()
