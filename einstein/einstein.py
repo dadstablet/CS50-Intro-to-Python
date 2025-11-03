@@ -1,5 +1,8 @@
-m = input("m: ")
-c = 300000000
-e = c * int(m)
+def einstein():
+    m = input("m: ")
+    C = 300000000
+    e = int(m) * C
+    print(e)
 
+einstein()
 print("E: ",e)
