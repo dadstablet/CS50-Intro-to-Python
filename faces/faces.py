@@ -1,3 +1,7 @@
 x = input("type here: ")
-def main(convert):
-    convert = input()
+
+def convert():
+    
+
+# def main(convert):
+#     convert = input()
