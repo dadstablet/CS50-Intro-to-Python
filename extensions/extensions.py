@@ -1,3 +1,5 @@
 x = input("File name: ").lower().strip()
 
-if x == "
+if x.endswith(".gif"): print("image/gif")
+elif
+else: print("application/octet-stream")
