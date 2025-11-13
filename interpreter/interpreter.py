@@ -1,2 +1,5 @@
 user_input = input("Expression: ")
-x = user_input.trim()
+user_array = user_input.split(" ")
+# print(user_array)
+x = int(user_array[0])
+z = int(user_array[2])
