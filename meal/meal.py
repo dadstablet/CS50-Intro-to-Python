@@ -1,9 +1,8 @@
 def main():
     x = input("What time is it? ")
-    convert()
+    convert(x)
 
 def convert(time):
-    time = x
     print(time)
 
 if __name__ == "__main__":
