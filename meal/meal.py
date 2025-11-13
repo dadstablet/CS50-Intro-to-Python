@@ -3,7 +3,9 @@ def main():
     convert(x)
 
 def convert(time):
-    print(time)
+    hours, minutes = time.split(":")
+    clock = int(hours) + (int(minutes)/60)
+    print(clock)
 
 if __name__ == "__main__":
     main()
