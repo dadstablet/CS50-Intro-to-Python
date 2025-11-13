@@ -7,6 +7,8 @@ y = str(user_array[1])
 
 if y == "+": result = round(x + z, 1)
 elif y == "-": result = round(x - z, 1)
+elif y == "/": result = round(x / z, 1)
+elif y == "*": result = round(x * z, 1)
 else: result = "bruh"
 
 print(result)
