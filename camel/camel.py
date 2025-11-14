@@ -1,2 +1,2 @@
-x = input("camelCase: ")
+x = str(input("camelCase: "))
 
