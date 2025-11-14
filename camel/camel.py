@@ -5,6 +5,4 @@ for char in x:
         lower_char = char.lower()
         snake_char = "_"+lower_char
         char = snake_char
-    store = [char]
-
-print(store)
+        print(char, end="")
