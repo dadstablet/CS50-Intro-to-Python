@@ -8,4 +8,3 @@ while True:
     amount = amount - z
     # if user_prompt != 50 or user_prompt != 25 or user_prompt != 10 or user_prompt != 5:
     #     break
-
