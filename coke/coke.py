@@ -6,8 +6,8 @@ while change > 0:
     if user_prompt == 25 or user_prompt == 10 or user_prompt == 5:
         change = change - user_prompt
         if change <= 0:
-            change_due = print("Change Owed: ",(change * -1))
+            change_due = print("Change Owed:", (change * -1))
             break
-        amount_due = print("Amount Due: ",change)
+        amount_due = print("Amount Due:", change)
     else:
-        change_due = print("Amount Due: ",change)
+        change_due = print("Amount Due:", change)
