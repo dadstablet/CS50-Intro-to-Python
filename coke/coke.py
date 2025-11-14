@@ -4,3 +4,4 @@ user_prompt = input("Insert Coin: ")
 
 while amount >= 0:
     amount = amount - user_prompt
+    user_prompt
