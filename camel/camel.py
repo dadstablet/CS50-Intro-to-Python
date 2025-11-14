@@ -1,4 +1,4 @@
 x = str(input("camelCase: "))
 
-for a in x:
-    print(a)
+for char in x:
+    list_of_characters 
