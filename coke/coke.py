@@ -1,4 +1,5 @@
 amount_prompt = print("Amount Due: 50")
+change = 50
 
 while True:
     user_prompt = int(input("Insert Coin: "))
