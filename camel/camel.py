@@ -1,7 +1,7 @@
 x = str(input("camelCase: "))
 
-def snake():
-    for char in x:
+def snake(user_input):
+    for char in user_input:
         if char.islower() == False:
             lower_char = char.lower()
             snake_char = "_"+lower_char
