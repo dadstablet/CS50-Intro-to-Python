@@ -1,3 +1,4 @@
 x = input("Input: ")
 
-x.rfind("a")
+find = x.rfind("a")
+print(find)
