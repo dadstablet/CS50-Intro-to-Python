@@ -1,4 +1,4 @@
 x = input("Input: ")
 
-find = x.rfind("a")
-print(find)
+for "a" in x:
+    print("hi")
