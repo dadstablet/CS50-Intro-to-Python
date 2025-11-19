@@ -1,4 +1,3 @@
 x = input("Input: ")
 
-for a in x:
-    print("hi")
+x_list = [for ]
