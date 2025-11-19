@@ -1,5 +1,9 @@
-x = input("Input: ")
-vowels = "AEOUIaeoui"
+def main():
 
-x_list = [char for vowel in x if vowel in vowels]
-print(x_list)
+    x = input("Input: ")
+    vowels = "AEOUIaeoui"
+
+    x_list = [char for char in x if char not in vowels]
+    print(str(x_list))
+
+main()
