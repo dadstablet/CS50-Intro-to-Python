@@ -16,4 +16,4 @@ while True:
         cost = menu[x.title()]
         print(cost)
         cost += cost
-    break
+        break
