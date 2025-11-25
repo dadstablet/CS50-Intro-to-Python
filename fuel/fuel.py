@@ -15,11 +15,13 @@ def fuel(input):
             main()
         else:
             if round_per == 0:
-                print("E")
+                output = "E"
             elif round_per == 100:
-                print("F")
+                output = "F"
             else:
-                print(f"{round_per}%")
+                output = f"{round_per}%"
+            print(output)
             break
+
 
 main()
