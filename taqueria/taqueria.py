@@ -10,4 +10,8 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
-
+while True:
+    x = input("Item: ")
+    for item in menu:
+        print(menu[x.title()])
+        break
