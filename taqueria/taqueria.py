@@ -17,7 +17,5 @@ def main():
 
 def receipt(input):
     print(menu[input.title()])
-    for item in menu:
-        cost += cost
-        print(cost)
-        break
+
+main()
