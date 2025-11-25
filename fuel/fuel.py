@@ -13,6 +13,8 @@ def fuel(input):
             main()
         except ZeroDivisionError:
             main()
+        except percent > 100:
+            main()
         else:
             if percent == 0:
                 output = "E"
@@ -22,8 +24,6 @@ def fuel(input):
                 output = "F"
                 print(output)
                 break
-            elif percent > 100:
-                main()
             else:
                 output = f"{round(percent)}%"
                 print(output)
