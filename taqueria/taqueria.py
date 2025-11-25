@@ -11,14 +11,13 @@ menu = {
 }
 
 def main():
-    x = input("Item: ")
-    return receipt(x)
-
-def receipt(input):
     while True:
         x = input("Item: ")
-        first_cost = menu[x.title()]
-        for item in menu:
-            cost += cost
-            print(cost)
-            break
+        return receipt(x)
+
+def receipt(input):
+    first_cost = menu[x.title()]
+    for item in menu:
+        cost += cost
+        print(cost)
+        break
