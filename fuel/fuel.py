@@ -8,8 +8,9 @@ def separate_input(input):
         try:
             numer = int(input[0])
             denom = int(input[2])
-        except ValueError:
             
+        except ValueError:
+
     print(numer/denom)
 
 main()
