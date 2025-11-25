@@ -8,18 +8,18 @@ def fuel(input):
         try:
             numer = int(input[0])
             denom = int(input[2])
-            round_per = round((numer/denom)*100,0)
+            percent = (numer/denom)*100
         except ValueError:
             main()
         except ZeroDivisionError:
             main()
         else:
-            if round_per == 0:
+            if percent == 0:
                 output = "E"
-            elif round_per == 100:
+            elif percent == 100:
                 output = "F"
             else:
-                output = f"{round_per}%"
+                output = f"{round(percent)}%"
             print(output)
             break
 
