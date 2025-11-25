@@ -12,9 +12,8 @@ menu = {
 
 while True:
     x = input("Item: ")
-    rec
     for item in menu:
         cost = menu[x.title()]
         print(cost)
-        receipt = receipt + cost
+        cost += cost
     break
