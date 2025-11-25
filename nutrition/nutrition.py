@@ -22,7 +22,7 @@ def main():
         'watermelon' : 80
     }
     x = input("Item: ")
-    if x in fruits:
+    if x.lower() in fruits:
         print("Calories:",fruits[x])
 
 
