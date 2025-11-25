@@ -18,19 +18,16 @@ def fuel(input):
         else:
             return (print(result(percent)))
 
-def result(percent):
-    if percent == 0:
+def result(x):
+    if x == 0:
         output = "E"
         print(output)
-        break
-    elif percent == 100:
+    elif x == 100:
         output = "F"
         print(output)
-        break
     else:
-        output = f"{round(percent)}%"
+        output = f"{round(x)}%"
         print(output)
-        break
 
 
 main()
