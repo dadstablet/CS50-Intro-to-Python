@@ -21,9 +21,10 @@ def main():
         'tangerine' : 50,
         'watermelon' : 80
     }
-    x = input("Item")
+    x = input("Item: ")
     if x in fruits:
-        print(fruits{x,1})
+        print("Calories:",fruits[x])
+
 
 main()
 
