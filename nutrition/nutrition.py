@@ -21,8 +21,8 @@ def main():
         'tangerine' : 50,
         'watermelon' : 80
     }
-    x = input("Item: ")
-    if x.lower() in fruits:
+    x = input("Item: ").lower()
+    if x in fruits:
         print("Calories:",fruits[x])
 
 
