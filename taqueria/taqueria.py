@@ -16,7 +16,7 @@ def main():
         return receipt(x)
 
 def receipt(input):
-    first_cost = menu[x.title()]
+    print(menu[input.title()])
     for item in menu:
         cost += cost
         print(cost)
