@@ -15,5 +15,5 @@ while True:
     for item in menu:
         cost = menu[x.title()]
         print(cost)
-        cost = cost + cost
+        receipt = receipt + cost
     break
