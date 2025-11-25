@@ -1,4 +1,4 @@
-input = input()
+input = input("Put input here ")
 
 split = input.split("/")
 numer = int(split[0])
