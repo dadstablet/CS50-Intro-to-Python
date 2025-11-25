@@ -8,13 +8,13 @@ def fuel(input):
         try:
             numer = int(input[0])
             denom = int(input[2])
-            percent = (numer/denom)*100
+            percent = int((numer/denom)*100)
         except ValueError:
             main()
         except ZeroDivisionError:
             main()
-        except percent > 100:
-            main()
+        # except percent > 100:
+        #     main()
         else:
             return (print(result(percent)))
 
