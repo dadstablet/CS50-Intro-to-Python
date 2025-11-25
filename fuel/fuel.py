@@ -1,10 +1,11 @@
 def main():
     x = input("Fraction: ")
-    # print(x[0])
+    return(separate_input(x))
+
 
 def separate_input(input):
-    numer = input[0]
-    denom = input[2]
-    result = numer/denom
+    numer = int(input[0])
+    denom = int(input[2])
+    print(numer/denom)
 
 main()
