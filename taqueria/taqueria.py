@@ -12,8 +12,8 @@ menu = {
 
 while True:
     x = input("Item: ")
+    cost = menu[x.title()]
     for item in menu:
-        cost = menu[x.title()]
         print(cost)
         cost += cost
         break
