@@ -21,13 +21,10 @@ def fuel(input):
 def result(x):
     if x == 0:
         output = "E"
-        print(output)
     elif x == 100:
         output = "F"
-        print(output)
     else:
         output = f"{round(x)}%"
-        print(output)
-
+    return(output)
 
 main()
