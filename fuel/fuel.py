@@ -8,7 +8,7 @@ def fuel(input):
         try:
             numer = int(input[0])
             denom = int(input[2])
-            round_per = round((numer/denom)*100)
+            round_per = round((numer/denom)*100,0)
         except ValueError:
             main()
         except ZeroDivisionError:
@@ -21,7 +21,7 @@ def fuel(input):
             # else:
             #     output = f"{round_per}%"
             # return(output)
-            print(round(numer/denom))
+            print(round_per)
             break
 
 
