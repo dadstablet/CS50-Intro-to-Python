@@ -14,10 +14,12 @@ def fuel(input):
         except ZeroDivisionError:
             main()
         else:
-            if round_per = 0:
+            if round_per == 0:
                 print("E")
-            elif round_per = 100:
-            print(f"{round_per}%")
+            elif round_per == 100:
+                print("F")
+            else:
+                print(f"{round_per}%")
             break
 
 main()
