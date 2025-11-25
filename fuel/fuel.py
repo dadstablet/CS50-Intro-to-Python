@@ -1,15 +1,17 @@
 def main():
     x = input("Fraction: ")
-    return(separate_input(x))
+    return(fuel(x))
 
 
-def separate_input(input):
+def fuel(input):
     while True:
         try:
             numer = int(input[0])
             denom = int(input[2])
             round_per = round(numer/denom)*100
         except ValueError:
+            main()
+        except ZeroDivisionError:
             main()
         else:
             print(f"{round_per}%")
