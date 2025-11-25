@@ -24,6 +24,8 @@ def result(x):
         output = "F"
     elif x > 100:
         return main()
+    elif x < 0:
+        return main()
     else:
         output = f"{round(x)}%"
     return(output)
