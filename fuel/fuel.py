@@ -8,11 +8,11 @@ def separate_input(input):
         try:
             numer = int(input[0])
             denom = int(input[2])
-            
+            round_per = round(numer/denom)*100
         except ValueError:
             main()
         else:
-            print(f"{100*numer/denom}%")
+            print(f"{round_per}%")
             break
 
 main()
