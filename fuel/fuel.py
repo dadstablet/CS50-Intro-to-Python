@@ -18,9 +18,9 @@ def fuel(input):
             return (print(result(percent)))
 
 def result(x):
-    if x == 0:
+    if 0 >= x <= 1:
         output = "E"
-    elif x == 100:
+    elif 99 >= x <= 100:
         output = "F"
     elif x > 100:
         return main()
