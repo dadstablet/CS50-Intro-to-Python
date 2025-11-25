@@ -8,10 +8,10 @@ def separate_input(input):
         try:
             numer = int(input[0])
             denom = int(input[2])
-            print(f"{100*numer/denom}%")
         except ValueError:
             pass
         else:
             print(f"{100*numer/denom}%")
+            break
 
 main()
