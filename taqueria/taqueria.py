@@ -27,7 +27,7 @@ def tally():
                 print(f"${cost}")
             loop_count += 1
         except KeyError:
-            print("Key Error")
+            pass
         except EOFError:
             break
 
