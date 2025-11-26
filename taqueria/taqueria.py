@@ -11,11 +11,13 @@ menu = {
 }
 
 def main():
-    while True:
-        x = input("Item: ")
-        return receipt(x)
+    # while True:
+        try:
+            x = input("Item: ")
+            print(menu[x.title()])
+        except KeyError:
+            print("Key Error")
 
-def receipt(input):
-    print(menu[input.title()])
+
 
 main()
