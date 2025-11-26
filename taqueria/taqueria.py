@@ -20,10 +20,10 @@ def tally():
         try:
             x = input("Item: ")
             if loop_count == 0:
-                cost = float((menu[x.title()]))
+                cost = round(float((menu[x.title()])),2)
                 print(f"${cost}")
             else:
-                cost = cost + float((menu[x.title()]))
+                cost = cost + round(float((menu[x.title()])),2)
                 print(f"${cost}")
             loop_count += 1
         except KeyError:
