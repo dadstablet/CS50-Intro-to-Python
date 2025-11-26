@@ -25,6 +25,7 @@ def tally():
             else:
                 cost = cost + float((menu[x.title()]))
                 print(f"${cost}")
+            _ = _ + 1
         except KeyError:
             print("Key Error")
 
