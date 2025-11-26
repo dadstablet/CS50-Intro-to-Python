@@ -16,6 +16,7 @@ menu = {
 
 def tally():
     while True:
+        _ = 0
         try:
             x = input("Item: ")
             cost = float((menu[x.title()]))
