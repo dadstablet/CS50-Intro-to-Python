@@ -10,16 +10,17 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
-def main():
-    x = input("Item: ")
-    return tally(x)
+# def main():
+#     x = input("Item: ")
+#     return tally(x)
 
-def tally(input):
+def tally(x):
     while True
         try:
-            cost = (menu[input.title()])
+            x = input("Item: ")
+            cost = (menu[x.title()])
             return cost
         except KeyError:
             print("Key Error")
 
-main()
+tally()
