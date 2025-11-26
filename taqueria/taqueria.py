@@ -15,16 +15,17 @@ menu = {
 #     return tally(x)
 
 def tally():
+    loop_count = 0
     while True:
         try:
             x = input("Item: ")
-            if _ == 0:
+            if loop_count == 0:
                 cost = float((menu[x.title()]))
                 print(f"${cost}")
             else:
                 cost = cost + float((menu[x.title()]))
                 print(f"${cost}")
-            _ = _ + 1
+            loop_count += 1
         except KeyError:
             print("Key Error")
 
