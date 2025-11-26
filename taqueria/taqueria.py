@@ -28,5 +28,7 @@ def tally():
             loop_count += 1
         except KeyError:
             print("Key Error")
+        except EOFError:
+            break
 
 tally()
