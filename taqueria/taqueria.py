@@ -16,7 +16,6 @@ menu = {
 
 def tally():
     while True:
-        _ = 0
         try:
             x = input("Item: ")
             if _ == 0:
