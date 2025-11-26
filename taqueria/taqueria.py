@@ -14,12 +14,12 @@ menu = {
 #     x = input("Item: ")
 #     return tally(x)
 
-def tally(x):
-    while True
+def tally():
+    while True:
         try:
             x = input("Item: ")
             cost = (menu[x.title()])
-            return cost
+            return print(f"${cost}")
         except KeyError:
             print("Key Error")
 
