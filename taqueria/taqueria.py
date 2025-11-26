@@ -22,5 +22,4 @@ def tally(input):
         except KeyError:
             print("Key Error")
 
-
 main()
