@@ -19,8 +19,12 @@ def tally():
         _ = 0
         try:
             x = input("Item: ")
-            cost = float((menu[x.title()]))
-            print(f"${cost}")
+            if _ == 0:
+                cost = float((menu[x.title()]))
+                print(f"${cost}")
+            else:
+                cost = cost + float((menu[x.title()]))
+                print(f"${cost}")
         except KeyError:
             print("Key Error")
 
