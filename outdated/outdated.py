@@ -13,3 +13,4 @@ months = [
     "December"
 ]
 
+x = input("Month: ")
