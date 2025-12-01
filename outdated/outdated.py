@@ -24,12 +24,17 @@ def main():
         try:
             x_list = x.split(" ")
             year_corrected = int(x_list[2])
-            month_corrected = months[x_list[0]]
+            month_corrected = int(months[x_list[0]])
             day_corrected = int(x_list[1].strip(","))
         except IndexError:
             main()
-    except KeyError:
+        except KeyError:
+            main()
+    if month_corrected > 12:
         main()
-    print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
+    elif day_corrected > 31:
+        main()
+    else:
+        print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
 
 main()
