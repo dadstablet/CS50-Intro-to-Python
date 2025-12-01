@@ -12,5 +12,10 @@ months = [
     "November",
     "December"
 ]
-
-x = input("Month: ")
+def main():
+    x = input("Month: ")
+    try:
+        x_list = x.split("/")
+        print(x_list)
+    except SyntaxError:
+        pass
