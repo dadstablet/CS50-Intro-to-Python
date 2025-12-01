@@ -22,5 +22,8 @@ def main():
     except IndexError:
         try:
             x_list = x.split(" ")
-            date_corrected = x_list[2]+'-'+x_list[1]+'-'+
+            date_corrected = x_list[2]+'-'+months[x_list[1]]+'-'+x_list[0]
+            print(date_corrected)
+        except IndexError:
+            print("IndexError")
 main()
