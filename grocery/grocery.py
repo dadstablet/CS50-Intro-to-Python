@@ -9,7 +9,12 @@ def main():
             user_list[x] = value_count
         except EOFError:
             break
-    print(sorted(user_list))
+    return output(user_list)
 
+def output(dict):
+    for key in dict:
+        dict[key] = right
+        key = left
+        print(left, right)
 
 main()
