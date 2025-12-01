@@ -1,15 +1,12 @@
 def main():
-    user_list = []
+    user_list = {}
     while True:
         try:
             x = input("input: ")
-            user_list.append(x)
+            user_list[x] = 1
         except EOFError:
             break
     print(user_list)
 
-def grocery(list_x):
-    for x in list_x:
-        
 
 main()
