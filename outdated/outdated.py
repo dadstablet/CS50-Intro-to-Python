@@ -27,7 +27,7 @@ def main():
             x_list = x.split(" ")
             year_corrected = int(x_list[2])
             month_corrected = months[x_list[0]]
-            day_corrected = int(x_list[1].append(","))
+            day_corrected = int(x_list[1].strip(","))
             # date_corrected = x_list[2]+'-'+str(months[x_list[0]])+'-'+x_list[1]
             # print(date_corrected)
             print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
