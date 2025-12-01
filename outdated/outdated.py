@@ -22,7 +22,6 @@ def main():
         day_corrected = int(x_list[0])
         date = f"{year_corrected}-{month_corrected:02}-{day_corrected:02}"
     except IndexError:
-        print("Error")
         try:
             x_list = x.split(" ")
             year_corrected = int(x_list[2])
@@ -33,6 +32,8 @@ def main():
             main()
         except KeyError:
             main()
+    except ValueError:
+        main()
     if month_corrected > 12:
         main()
     elif day_corrected > 31:
