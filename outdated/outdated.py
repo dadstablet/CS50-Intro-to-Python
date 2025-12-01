@@ -35,6 +35,8 @@ def main():
             main()
         except KeyError:
             main()
+        except ValueError:
+            main()
     except ValueError:
         main()
     if month_corrected > 12:
