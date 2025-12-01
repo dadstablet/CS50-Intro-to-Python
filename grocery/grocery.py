@@ -9,7 +9,7 @@ def main():
             user_list[x] = value_count
         except EOFError:
             break
-    print(user_list)
+    print(sorted(user_list))
 
 
 main()
