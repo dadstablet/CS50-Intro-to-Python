@@ -8,7 +8,8 @@ def main():
             break
     print(user_list)
 
-def grocery():
-    
+def grocery(list_x):
+    for x in list_x:
+        
 
 main()
