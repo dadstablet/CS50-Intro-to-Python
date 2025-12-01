@@ -13,8 +13,8 @@ def main():
 
 def output(dict):
     for key in dict:
-        dict[key] = right
-        key = left
+        left = key
+        right = dict[key]
         print(left, right)
 
 main()
