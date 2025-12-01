@@ -1,4 +1,10 @@
 def main():
     while True:
-        x = input("Input: ")
-        
+        try:
+            x = input("input: ")
+            store_x = list(x)
+        except EOFError:
+            break
+    print(store_x)
+
+main()
