@@ -28,8 +28,8 @@ def main():
             day_corrected = int(x_list[1].strip(","))
         except IndexError:
             main()
-        except KeyError:
-            main()
+    except KeyError:
+        main()
     print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
 
 main()
