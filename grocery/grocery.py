@@ -15,6 +15,6 @@ def output(dict):
     for key in sorted(dict):
         left = key
         right = dict[key]
-        print(left, right)
+        print(key.capitalize(), right)
 
 main()
