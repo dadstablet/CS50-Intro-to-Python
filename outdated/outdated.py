@@ -30,4 +30,6 @@ def main():
             print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
         except IndexError:
             main()
+        except KeyError:
+            main()
 main()
