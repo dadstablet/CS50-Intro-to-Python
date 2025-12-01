@@ -20,16 +20,16 @@ def main():
         year_corrected = int(x_list[2])
         month_corrected = int(x_list[1])
         day_corrected = int(x_list[0])
-        print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
     except IndexError:
         try:
             x_list = x.split(" ")
             year_corrected = int(x_list[2])
             month_corrected = months[x_list[0]]
             day_corrected = int(x_list[1].strip(","))
-            print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
         except IndexError:
             main()
         except KeyError:
             main()
+    print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
+
 main()
