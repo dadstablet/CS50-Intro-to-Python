@@ -21,20 +21,20 @@ def main():
         month_corrected = int(x_list[1])
         day_corrected = int(x_list[0])
         date = f"{year_corrected}-{month_corrected:02}-{day_corrected:02}"
-        return date
     except IndexError:
         print("Error")
-        # try:
-        #     x_list = x.split(" ")
-        #     year_corrected = int(x_list[2])
-        #     month_corrected = int(months[x_list[0]])
-        #     day_corrected = int(x_list[1].strip(","))
-        #     date = f"{year_corrected}-{month_corrected:02}-{day_corrected:02}"
-        #     return date
-        # except IndexError:
-        #     main()
-        # except KeyError:
-        #     main()
+        try:
+            x_list = x.split(" ")
+            year_corrected = int(x_list[2])
+            month_corrected = int(months[x_list[0]])
+            day_corrected = int(x_list[1].strip(","))
+            date = f"{year_corrected}-{month_corrected:02}-{day_corrected:02}"
+        except IndexError:
+            main()
+        except KeyError:
+            main()
+    if month_corrected > 12:
+        main()
     print(date)
 
 main()
