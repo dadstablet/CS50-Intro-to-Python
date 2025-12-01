@@ -12,7 +12,7 @@ def main():
     return output(user_list)
 
 def output(dict):
-    for key in dict:
+    for key in sorted(dict):
         left = key
         right = dict[key]
         print(left, right)
