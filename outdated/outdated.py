@@ -30,11 +30,11 @@ def main():
             main()
         except KeyError:
             main()
-    if month_corrected > 12:
-        main()
-    elif day_corrected > 31:
-        main()
-    else:
-        print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
+    # if month_corrected > 12:
+    #     main()
+    # elif day_corrected > 31:
+    #     main()
+    # else:
+    print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
 
 main()
