@@ -17,13 +17,20 @@ def main():
     x = input("Month: ")
     try:
         x_list = x.split("/")
-        date_corrected = str(x_list[2]+'-'+x_list[1]+'-'+x_list[0])
-        print(date_corrected)
+        year_corrected = int(x_list[2])
+        month_corrected = int(x_list[1])
+        day_corrected = int(x_list[0])
+        print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
     except IndexError:
+        # print("indexerror")
         try:
             x_list = x.split(" ")
-            date_corrected = x_list[2]+'-'+months[x_list[1]]+'-'+x_list[0]
-            print(date_corrected)
+            year_corrected = int(x_list[2])
+            month_corrected = months[x_list[0]]
+            day_corrected = int(x_list[1].append(","))
+            # date_corrected = x_list[2]+'-'+str(months[x_list[0]])+'-'+x_list[1]
+            # print(date_corrected)
+            print(f"{year_corrected}-{month_corrected:02}-{day_corrected:02}")
         except IndexError:
             print("IndexError")
 main()
