@@ -1,5 +1,5 @@
 def main():
-    grocery_list = []
+    grocery_list = {}
     while True:
         try:
             x = input("input: ")
