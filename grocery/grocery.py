@@ -1,9 +1,10 @@
 def main():
     user_list = {}
+    value_count = 1
     while True:
         try:
             x = input("input: ")
-            user_list[x] = 1
+            user_list[x] = value_count
         except EOFError:
             break
     print(user_list)
