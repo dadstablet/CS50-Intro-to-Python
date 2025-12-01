@@ -3,7 +3,7 @@ def main():
     while True:
         try:
             value_count = 1
-            x = input("input: ")
+            x = input()
             if x in user_list:
                 value_count += 1
             user_list[x] = value_count
@@ -13,8 +13,6 @@ def main():
 
 def output(dict):
     for key in sorted(dict):
-        left = key
-        right = dict[key]
-        print(key.capitalize(), right)
+        print(key.upper(), dict[key])
 
 main()
