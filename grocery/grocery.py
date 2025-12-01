@@ -13,6 +13,6 @@ def main():
 
 def output(dict):
     for key in sorted(dict):
-        print(key.upper(), dict[key])
+        print(dict[key], key.upper())
 
 main()
