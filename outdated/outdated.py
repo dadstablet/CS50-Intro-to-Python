@@ -18,4 +18,6 @@ def main():
         x_list = x.split("/")
         print(x_list)
     except SyntaxError:
-        pass
+        print("SyntaxError")
+
+main()
