@@ -1,10 +1,11 @@
 def main():
+    grocery_list = []
     while True:
         try:
             x = input("input: ")
-            store_x = [x]
+            grocery_list.append(x)
         except EOFError:
             break
-    print(store_x)
+    print(grocery_list)
 
 main()
