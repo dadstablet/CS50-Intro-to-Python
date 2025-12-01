@@ -35,6 +35,9 @@ def main():
             main()
     if month_corrected > 12:
         main()
-    print(date)
+    elif day_corrected > 31:
+        main()
+    else:
+        print(date)
 
 main()
