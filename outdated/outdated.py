@@ -26,10 +26,10 @@ def main():
             x_list = x.split(" ")
             year_corrected = int(x_list[2])
             month_corrected = int(months[x_list[0]])
-            if x_list[1].find(","):
-                day_corrected = int(x_list[1].strip(","))
+            if x_list[1].find(",") == -1:
+                main()
             else:
-                KeyError
+                day_corrected = int(x_list[1].strip(","))
             date = f"{year_corrected}-{month_corrected:02}-{day_corrected:02}"
         except IndexError:
             main()
