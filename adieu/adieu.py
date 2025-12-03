@@ -1,7 +1,7 @@
 import inflect
 p = inflect.engine()
 
-def create_list():
+def main():
     name_list = []
     while True:
         try:
@@ -10,5 +10,6 @@ def create_list():
         except EOFError:
             break
 
+def output()
 output_list = p.join(name_list)
 output = print(f"Adieu, adieu, to {output_list}")
