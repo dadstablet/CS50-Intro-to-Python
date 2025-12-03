@@ -1,5 +1,4 @@
 import pyfiglet
-import sys
 
-f = pyfiglet.figlet(font='slant')
-print(f.renderText('text to render'))
+f = pyfiglet.figlet_format("text to render", font="slant")
+print(f)
