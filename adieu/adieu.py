@@ -9,9 +9,6 @@ while True:
     except EOFError:
         break
 
-count_list = len(name_list)
+output_list = p.join(name_list)
 
-if n
-
-
-output = print(f"Adieu, adieu, to {name_list}")
+output = print(f"Adieu, adieu, to {output_list}")
