@@ -5,7 +5,7 @@ import random
 figlet = pyfiglet.Figlet()
 font_list = figlet.getFonts()
 
-if len(sys.argv) == 2:
+if len(sys.argv) == 3:
     # f_input = sys.argv[1]
     user_font = sys.argv[2]
 elif len(sys.argv) == 1:
