@@ -7,7 +7,9 @@ while True:
     except EOFError:
         break
 
-for name in name_list:
-    
+count_list = len(name_list)
+
+if n
+
 
 output = print(f"Adieu, adieu, to {name_list}")
