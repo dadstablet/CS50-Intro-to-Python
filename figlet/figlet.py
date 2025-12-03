@@ -1,9 +1,10 @@
 from pyfiglet import Figlet
 import sys
 
-sys.argv[1]
+f_input = sys.argv[1]
+font_name = sys.argv[2]
 
 x = input("Input: ")
 
-f = pyfiglet.figlet_format("text to render", font="slant")
+f = pyfiglet.figlet_format(x, font="slant")
 print(f)
