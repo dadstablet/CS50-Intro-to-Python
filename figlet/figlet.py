@@ -1,5 +1,6 @@
-import pyfiglet
+from pyfiglet import Figlet
 import sys
+import random
 
 if len(sys.argv) == 2:
     # f_input = sys.argv[1]
