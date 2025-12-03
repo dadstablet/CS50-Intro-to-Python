@@ -1,3 +1,5 @@
+import inflect
+
 name_list = []
 
 while True:
