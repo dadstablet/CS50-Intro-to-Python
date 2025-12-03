@@ -6,7 +6,6 @@ while True:
         x = input("Name: ")
         name_list = name_list.append(x)
     except EOFError:
-        break
-    return name_list
+        return name_list
 
-output = print(f"Adieu, adieu, to {name_lst}")
+output = print(f"Adieu, adieu, to {name_list}")
