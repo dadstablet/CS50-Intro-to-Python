@@ -6,5 +6,5 @@ font_name = sys.argv[2]
 
 x = input("Input: ")
 
-f = pyfiglet.figlet_format(x, font="slant")
+f = pyfiglet.figlet_format(x, font=font_name)
 print(f)
