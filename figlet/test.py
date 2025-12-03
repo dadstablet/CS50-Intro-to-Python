@@ -5,4 +5,4 @@ figlet = Figlet()
 
 font_list = figlet.getFonts()
 
-font_list.random.random()
+print(random.choice(font_list))
