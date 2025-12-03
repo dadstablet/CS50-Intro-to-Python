@@ -1,6 +1,6 @@
 from pyfiglet import Figlet
 
 figlet = Figlet()
-print(figlet.getFonts())
+# print(figlet.getFonts())
 # figlet.setFont(font=f)
-# print(figlet.renderText(s))
+print(figlet.renderText("s"))
