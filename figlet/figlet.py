@@ -8,6 +8,6 @@ elif len(sys.argv) == 0:
     font_name = "random"
 
 x = input("Input: ")
-f = pyfiglet.figlet_format(x, font=font_name)
+f = pyfiglet.figlet_format(x)
 print(f)
 
