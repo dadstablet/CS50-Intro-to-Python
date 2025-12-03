@@ -4,11 +4,12 @@ import random
 
 figlet = pyfiglet.Figlet()
 font_list = figlet.getFonts()
+accepted_f = ['-f','-font']
 
 if len(sys.argv) == 1:
     user_font = random.choice(font_list)
 elif len(sys.argv) == 3:
-    if sys.argv[1] != '-f':
+    if sys.argv[1] not in accepted_f:
         sys.exit("Invalid usage")
     else:
         user_font = sys.argv[2]
