@@ -12,8 +12,8 @@ elif len(sys.argv) == 3:
         sys.exit("Invalid usage")
     else:
         user_font = sys.argv[2]
-else:
-    sys.exit("Invalid usage")
+# else:
+#     sys.exit("Invalid usage")
 
 x = input("Input: ")
 f = pyfiglet.figlet_format(x, font=user_font)
