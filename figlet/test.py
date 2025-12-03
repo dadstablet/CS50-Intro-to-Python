@@ -1,6 +1,8 @@
 from pyfiglet import Figlet
+import random
 
 figlet = Figlet()
-# print(figlet.getFonts())
-# figlet.setFont(font=f)
-print(figlet.renderText("s"))
+
+font_list = figlet.getFonts()
+
+font_list.random.random()
