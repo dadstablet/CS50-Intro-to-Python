@@ -1,3 +1,7 @@
-pip install emoji
+import emoji
 
-print(emoji.emojize(:thumbs_up:))
+def main():
+    x = input("Input: ")
+    print(emoji.emojize(x))
+
+main()
