@@ -15,7 +15,6 @@ def check(a):
         print("Too small!")
     elif a > answer:
         print("Too large!")
-    print(answer)
 
 main()
 
