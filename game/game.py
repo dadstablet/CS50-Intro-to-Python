@@ -6,12 +6,13 @@ def main():
     except:
         main()
 
-        while True:
-            try:
-                x = int(input("Guess: "))
-                check(level, x)
-            except:
-                pass
+
+    while True:
+        try:
+            x = int(input("Guess: "))
+            check(level, x)
+        except:
+            pass
 
 def check(a, b):
     answer = random.randint(1, a)
