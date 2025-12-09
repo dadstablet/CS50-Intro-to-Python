@@ -5,11 +5,12 @@ def main():
         level = int(input("Level: "))
     except:
         main()
-        try:
-            x = int(input("Guess: "))
-            check(level, x)
-        except:
-            
+        while True:
+            try:
+                x = int(input("Guess: "))
+                check(level, x)
+            except:
+                pass
 
 def check(a, b):
     answer = random.randint(1, a)
