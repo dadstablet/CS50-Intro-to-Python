@@ -2,7 +2,7 @@ import random
 
 def main():
     try:
-        x = int(input("Level: "))
+        level = int(input("Level: "))
         check(x)
     except:
         main()
