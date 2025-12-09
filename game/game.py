@@ -3,16 +3,13 @@ import random
 def main():
     try:
         level = int(input("Level: "))
-    except:
-        main()
-
-
-    while True:
         try:
             x = int(input("Guess: "))
             check(level, x)
         except:
             pass
+    except:
+        pass
 
 def check(a, b):
     answer = random.randint(1, a)
