@@ -3,17 +3,19 @@ import random
 def main():
     try:
         x = int(input("Level: "))
-        return x
+        check(x)
     except:
         main()
 
-answer = random.randint(1, x)
-if x == answer:
-    print("Just right!")
-elif x < answer:
-    print("Too small!")
-elif x > answer:
-    print("Too large!")
+def check(a):
+    answer = random.randint(1, a)
+    if a == answer:
+        print("Just right!")
+    elif a < answer:
+        print("Too small!")
+    elif a > answer:
+        print("Too large!")
+    print(answer)
 
 main()
-print(answer)
+
