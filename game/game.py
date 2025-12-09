@@ -3,18 +3,21 @@ import random
 def main():
     try:
         level = int(input("Level: "))
-        check(x)
+        x = int(input("Guess: "))
+        check(level, x)
     except:
         main()
 
-def check(a):
+def check(a, b):
     answer = random.randint(1, a)
-    if a == answer:
+    if b == answer:
         print("Just right!")
-    elif a < answer:
+    elif b < answer:
         print("Too small!")
-    elif a > answer:
+        main()
+    elif b > answer:
         print("Too large!")
+        main()
 
 main()
 
