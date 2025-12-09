@@ -5,6 +5,7 @@ def main():
         level = int(input("Level: "))
     except:
         main()
+
         while True:
             try:
                 x = int(input("Guess: "))
