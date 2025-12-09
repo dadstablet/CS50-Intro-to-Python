@@ -3,10 +3,13 @@ import random
 def main():
     try:
         level = int(input("Level: "))
-        x = int(input("Guess: "))
-        check(level, x)
     except:
         main()
+        try:
+            x = int(input("Guess: "))
+            check(level, x)
+        except:
+            
 
 def check(a, b):
     answer = random.randint(1, a)
