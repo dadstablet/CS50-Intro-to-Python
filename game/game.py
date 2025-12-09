@@ -5,7 +5,7 @@ def main():
         level = int(input("Level: "))
         x = int(input("Guess: "))
         check(level, x)
-    except:
+    except SyntaxError:
         pass
 
 def check(a, b):
