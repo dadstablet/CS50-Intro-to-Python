@@ -3,11 +3,8 @@ import random
 def main():
     try:
         level = int(input("Level: "))
-        try:
-            x = int(input("Guess: "))
-            check(level, x)
-        except:
-            pass
+        x = int(input("Guess: "))
+        check(level, x)
     except:
         pass
 
