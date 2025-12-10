@@ -17,10 +17,8 @@ def get_level():
         else:
             pass
 
-
-
 def generate_integer(level):
-    ...
+    
 
 
 if __name__ == "__main__":
