@@ -9,9 +9,14 @@ def get_level():
     while True:
         try:
             n = int(input("Level: "))
-            return n
-        except n > 3:
+        except ValueError:
             pass
+        if 1 <= n <= 3:
+            print(n)
+            break
+        else:
+            pass
+
 
 
 def generate_integer(level):
