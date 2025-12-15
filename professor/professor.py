@@ -14,7 +14,7 @@ def main():
                 Q = int(input(f"{X} + {Y} = "))
                 if Q == (X + Y):
                     score += 1
-                    err
+                    errors = 3
                 else:
                     raise ValueError
             except ValueError:
