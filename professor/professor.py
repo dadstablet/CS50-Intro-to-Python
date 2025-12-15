@@ -7,7 +7,12 @@ def main():
     while _ < 10:
         X = generate_integer(user_level)[0]
         Y = generate_integer(user_level)[1]
-        print
+        Q = input(f"{X} + {Y} = ")
+        if Q == X + Y:
+            pass
+        else:
+            print("EEE")
+        _ += 1
 
 def get_level():
     while True:
