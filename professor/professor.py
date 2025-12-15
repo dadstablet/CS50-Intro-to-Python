@@ -18,7 +18,10 @@ def get_level():
         else:
             pass
 
-# def generate_integer(level):
+def generate_integer(level):
+    get_level()
+    if n = 1:
+        level 
 
 
 
