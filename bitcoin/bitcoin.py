@@ -1,6 +1,12 @@
 import requests
+import sys
 
 try:
-    ...
-except requests.RequestException:
-    ...
+    n = float(sys.argv[1])
+except ValueError:
+    sys.exit("u trash")
+
+# try:
+
+# except requests.RequestException:
+#     ...
