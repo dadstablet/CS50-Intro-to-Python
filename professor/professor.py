@@ -6,7 +6,6 @@ def main():
     _ = 0
     while _ < 10:
         generate_integer(user_level)
-        
 
 def get_level():
     while True:
