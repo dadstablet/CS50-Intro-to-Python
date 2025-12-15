@@ -13,8 +13,7 @@ def get_level():
         except ValueError:
             pass
         if 1 <= n <= 3:
-            print(n)
-            break
+            return n
         else:
             pass
 
