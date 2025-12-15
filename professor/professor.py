@@ -3,8 +3,10 @@ import random
 
 def main():
     user_level = get_level()
-    generate_integer(user_level)
-    
+    _ = 0
+    while _ < 10:
+        generate_integer(user_level)
+        
 
 def get_level():
     while True:
