@@ -8,17 +8,15 @@ def main():
     while _ < 10:
         X = generate_integer(user_level)
         Y = generate_integer(user_level)
-        Q = input(f"{X} + {Y} = ")
-        while True:
-            try:
-                int_Q = int(Q)
-                if int_Q == (X +Y):
-                    print(Q)
-                    score += 1
-                else:
-                    raise ValueError
-            except ValueError:
-                print("EEE")
+        try:
+            Q = int(input(f"{X} + {Y} = "))
+            if Q == (X + Y):
+                print(Q)
+                score += 1
+            else:
+                raise ValueError
+        except ValueError:
+            print("EEE")
         _ += 1
     print(f"Score: {score}")
 
