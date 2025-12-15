@@ -10,7 +10,7 @@ def main():
         Y = generate_integer(user_level)[1]
         Q = input(f"{X} + {Y} = ")
         if Q == (X + Y):
-            print("")
+            print("hello")
             score += 1
         # else:
         #     print("EEE")
