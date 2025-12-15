@@ -11,15 +11,15 @@ def main():
         Q = input(f"{X} + {Y} = ")
         try:
             int_Q = int(Q)
-                if int_Q == (X +Y):
-                    print(Q)
-                    score += 1
-                else:
-                    print("EEE")
+            if int_Q == (X +Y):
+                print(Q)
+                score += 1
+            else:
+                print("EEE")
         except ValueError:
             print("EEE")
         _ += 1
-    # print(f"Score: {score}")
+    print(f"Score: {score}")
 
 def get_level():
     while True:
