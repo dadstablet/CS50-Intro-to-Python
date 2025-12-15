@@ -9,16 +9,16 @@ def main():
         X = generate_integer(user_level)[0]
         Y = generate_integer(user_level)[1]
         Q = input(f"{X} + {Y} = ")
-    #     if Q == (X + Y):
-    #         print("")
-    #         score += 1
-    #     else:
-    #         print("EEE")
-    #     _ += 1
-    # print(f"Score: {score}")
-        print(X+Y)
-        print(Q)
-        _ += 1
+        if Q == (X + Y):
+            print("")
+            score += 1
+        # else:
+        #     print("EEE")
+        # _ += 1
+    print(f"Score: {score}")
+        # print(X+Y)
+        # print(Q)
+        # _ += 1
 
 def get_level():
     while True:
