@@ -15,7 +15,7 @@ def main():
                 print(Q)
                 score += 1
             else:
-                print("EEE")
+                raise ValueError
         except ValueError:
             print("EEE")
         _ += 1
