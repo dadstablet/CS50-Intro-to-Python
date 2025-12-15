@@ -16,7 +16,9 @@ def main():
     #         print("EEE")
     #     _ += 1
     # print(f"Score: {score}")
-        print()
+        print(X+Y)
+        print(Q)
+        _ += 1
 
 def get_level():
     while True:
