@@ -4,6 +4,7 @@ import random
 def main():
     user_level = get_level()
     _ = 0
+    score = 0
     while _ < 10:
         X = generate_integer(user_level)[0]
         Y = generate_integer(user_level)[1]
