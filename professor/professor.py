@@ -8,8 +8,8 @@ def main():
         X = generate_integer(user_level)[0]
         Y = generate_integer(user_level)[1]
         Q = input(f"{X} + {Y} = ")
-        if Q == X + Y:
-            pass
+        if Q == (X + Y):
+            print("")
         else:
             print("EEE")
         _ += 1
