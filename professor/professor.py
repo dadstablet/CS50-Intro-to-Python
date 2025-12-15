@@ -2,8 +2,9 @@ import random
 
 
 def main():
-    get_level()
-    X = random.randint
+    user_level = get_level
+    generate_integer(user_level)
+    print
 
 
 def get_level():
@@ -19,10 +20,16 @@ def get_level():
             pass
 
 def generate_integer(level):
-    get_level()
-    if n = 1:
-        level 
-
+    if level = 1:
+        X = random.randint(1, 9)
+        Y = random.randint(1, 9)
+    elif level = 2:
+        X = random.randint(10, 99)
+        Y = random.randint(10, 99)
+    elif level = 3:
+        X = random.randint(100, 999)
+        Y = random.randint(100, 999)
+    return X and Y
 
 
 if __name__ == "__main__":
