@@ -30,7 +30,7 @@ def generate_integer(level):
             return random.randint(100, 999)
             # Y = random.randint(100, 999)
         else:
-            return 'hello'
+            return random.randint(1000,9999)
     except ValueError:
         return 'u trash'
 
