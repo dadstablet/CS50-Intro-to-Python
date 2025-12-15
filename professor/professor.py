@@ -10,9 +10,11 @@ def main():
         Q = input(f"{X} + {Y} = ")
         if Q == (X + Y):
             print("")
+            score += 1
         else:
             print("EEE")
         _ += 1
+    print(f"Score: {score}")
 
 def get_level():
     while True:
