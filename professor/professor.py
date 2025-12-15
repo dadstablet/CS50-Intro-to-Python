@@ -25,13 +25,12 @@ def get_level():
     while True:
         try:
             n = int(input("Level: "))
+            if 1 <= n <= 3:
+                return n
+            else:
+                pass
         except:
-            get_level()
-        if 1 <= n <= 3:
-            return n
-        else:
             pass
-
 
 def generate_integer(level):
     if level == 1:
