@@ -25,7 +25,7 @@ def get_level():
     while True:
         try:
             n = int(input("Level: "))
-        except ValueError:
+        except:
             pass
         if 1 <= n <= 3:
             return n
