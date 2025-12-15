@@ -14,7 +14,7 @@ def main():
             score += 1
         # else:
         #     print("EEE")
-        # _ += 1
+        _ += 1
     # print(f"Score: {score}")
 
 def get_level():
