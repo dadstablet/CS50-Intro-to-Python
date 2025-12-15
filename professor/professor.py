@@ -3,6 +3,7 @@ import random
 
 def main():
     get_level()
+    X = random.randint
 
 
 def get_level():
