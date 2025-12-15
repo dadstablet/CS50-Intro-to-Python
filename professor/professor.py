@@ -11,7 +11,6 @@ def main():
         try:
             Q = int(input(f"{X} + {Y} = "))
             if Q == (X + Y):
-                print(Q)
                 score += 1
             else:
                 raise ValueError
