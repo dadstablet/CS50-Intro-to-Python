@@ -6,7 +6,7 @@ try:
 except ValueError:
     sys.exit("u trash")
 
-# try:
+try:
+    r = requests.get()
+except requests.RequestException:
 
-# except requests.RequestException:
-#     ...
