@@ -6,8 +6,8 @@ def main():
     _ = 0
     score = 0
     while _ < 10:
-        X = generate_integer(user_level)[0]
-        Y = generate_integer(user_level)[1]
+        X = int(generate_integer(user_level)[0])
+        Y = int(generate_integer(user_level)[1])
         Q = input(f"{X} + {Y} = ")
         try:
             int_Q = int(Q)
