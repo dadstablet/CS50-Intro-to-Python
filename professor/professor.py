@@ -5,7 +5,9 @@ def main():
     user_level = get_level()
     _ = 0
     while _ < 10:
-        generate_integer(user_level)
+        X = generate_integer(user_level)[0]
+        Y = generate_integer(user_level)[1]
+        print
 
 def get_level():
     while True:
