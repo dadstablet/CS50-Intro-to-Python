@@ -9,8 +9,8 @@ def main():
         X = generate_integer(user_level)[0]
         Y = generate_integer(user_level)[1]
         Q = input(f"{X} + {Y} = ")
-        if Q == 10:
-            print("hello")
+        if Q != 10:
+            print(Q)
             score += 1
         # else:
         #     print("EEE")
