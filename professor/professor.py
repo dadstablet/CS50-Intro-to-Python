@@ -29,6 +29,8 @@ def generate_integer(level):
         elif level == 3:
             return random.randint(100, 999)
             # Y = random.randint(100, 999)
+        else:
+            return 'hello'
     except ValueError:
         return 'u trash'
 
