@@ -14,12 +14,14 @@ def main():
                 Q = int(input(f"{X} + {Y} = "))
                 if Q == (X + Y):
                     score += 1
-                    errors = 3
+                    errors = 100
                 else:
                     raise ValueError
             except ValueError:
                 errors += 1
                 print("EEE")
+            if errors == 3:
+                print(f"{X} + {Y} = {X+Y}")
         _ += 1
     print(f"Score: {score}")
 
