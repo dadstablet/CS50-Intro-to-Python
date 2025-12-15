@@ -6,8 +6,8 @@ def main():
     _ = 0
     score = 0
     while _ < 10:
-        X = int(generate_integer(user_level)[0])
-        Y = int(generate_integer(user_level)[1])
+        X = generate_integer(user_level)
+        Y = generate_integer(user_level)
         Q = input(f"{X} + {Y} = ")
         try:
             int_Q = int(Q)
@@ -34,11 +34,11 @@ def get_level():
 
 def generate_integer(level):
     if level == 1:
-        return [random.randint(1, 9), random.randint(1, 9)]
+        return random.randint(1, 9)
     elif level == 2:
-        return [random.randint(10, 99), random.randint(10, 99)]
+        return random.randint(10, 99)
     elif level == 3:
-        return [random.randint(100, 999), random.randint(10, 99)]
+        return random.randint(100, 999)
     else:
         raise ValueError
 
