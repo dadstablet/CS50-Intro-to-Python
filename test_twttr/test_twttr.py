@@ -1,4 +1,5 @@
 from twttr import shorten
+import random
 
 def test_heLLO():
     x = 'heLLO'
@@ -9,5 +10,5 @@ def test_heLLO():
 #     assert shorten(x) == 'HLL'
 
 def test_int():
-    x = 1
-    assert shorten(x) == "Error"
+    x = random.randint()
+    assert shorten(x) == x
