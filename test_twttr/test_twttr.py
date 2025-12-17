@@ -7,8 +7,12 @@ def test_heLLO():
 
 def test_HELLO():
     x = 'HELLO'
-    assert shorten(x) == 'HLL'
+    assert shorten(x) == "HLL"
 
 def test_int():
     x = random.randint(-999,999)
     assert shorten(x) == x
+
+def test_punct():
+    x = "H..."
+    assert shorten(x) == "H..."
