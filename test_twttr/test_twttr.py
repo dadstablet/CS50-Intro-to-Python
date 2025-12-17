@@ -6,7 +6,7 @@ def test_hello():
 
 def test_HELLO():
     x = 'HELLO'
-    assert shorten(x) == 'HELLO'
+    assert shorten(x) == 'HLL'
 
 def test_int():
     x = 1

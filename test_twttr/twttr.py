@@ -3,7 +3,7 @@ def main():
     print(shorten(x))
 
 def shorten(word):
-    vowels = "AEOUIaeoui"
+    vowels = "AOUIEaeoui" 
     try:
         word = [char for char in word if char not in vowels]
         short_word = []
