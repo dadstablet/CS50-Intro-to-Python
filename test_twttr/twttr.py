@@ -11,7 +11,7 @@ def shorten(word):
             short_word.append(char)
         return ''.join(short_word)
     except TypeError:
-        return "Error"
+        return word
 
 if __name__ == "__main__":
     main()

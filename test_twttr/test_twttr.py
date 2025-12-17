@@ -10,5 +10,5 @@ def test_heLLO():
 #     assert shorten(x) == 'HLL'
 
 def test_int():
-    x = random.randint()
+    x = random.randint(-999,999)
     assert shorten(x) == x
