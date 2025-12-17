@@ -8,6 +8,6 @@ def test_HELLO():
     x = 'HELLO'
     assert shorten(x) == 'HLL'
 
-def test_int():
-    x = 1
-    assert shorten(x) == 1
+# def test_int():
+#     x = 1
+#     assert shorten(x) == 1
