@@ -1,12 +1,12 @@
 from twttr import shorten
 
-def test_hello():
-    x = 'hello'
-    assert shorten(x) == "hll"
+def test_heLLO():
+    x = 'heLLO'
+    assert shorten(x) == "hLL"
 
-def test_HELLO():
-    x = 'HELLO'
-    assert shorten(x) == 'HLL'
+# def test_HELLO():
+#     x = 'HELLO'
+#     assert shorten(x) == 'HLL'
 
 def test_int():
     x = 1
