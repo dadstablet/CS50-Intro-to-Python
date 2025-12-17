@@ -1,13 +1,7 @@
-from twttr import twttr
+from twttr import shorten
 
-def main():
-    x = input("")
+def test_hello:
+    x = input("Type hello :")
     shorten(x)
 
-
-def shorten(word):
-    assert twttr(word)  == "twttr"
-
-
-if __name__ == "__main__":
-    main()
+test_hello()

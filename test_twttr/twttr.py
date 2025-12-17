@@ -1,8 +1,8 @@
 def main():
     x = input("Input: ")
-    print(twttr(x))
+    print(shorten(x))
 
-def twttr(word):
+def shorten(word):
     vowels = "AEOUIaeoui"
     word = [char for char in word if char not in vowels]
     short_word = []
