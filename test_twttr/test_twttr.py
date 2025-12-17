@@ -1,9 +1,15 @@
 from twttr import shorten
 
 def test_hello():
-    x = input("Type hello : ")
-    char for char in x if 
+    x = 'hello'
     assert shorten(x) == "hll"
 
+def test_HELLO():
+    x = 'HELLO'
+    assert shorten(x) == 'HELLO'
 
-test_hello()
+def test_number():
+    x = 1
+    assert shorten(x) == 1
+
+test_number()
