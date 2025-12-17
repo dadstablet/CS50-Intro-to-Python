@@ -1,7 +1,3 @@
-def main():
-    x = input("Input: ")
-    print(shorten(x))
-
 def shorten(word):
     vowels = "AOUIEaeoui"
     short_word = []
@@ -12,6 +8,10 @@ def shorten(word):
         return ''.join(short_word)
     except TypeError:
         return word
+
+def main():
+    x = input("Input: ")
+    print(shorten(x))
 
 if __name__ == "__main__":
     main()
