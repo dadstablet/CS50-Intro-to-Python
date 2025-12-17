@@ -4,9 +4,9 @@ def main():
 
 def shorten(word):
     vowels = "AOUIEaeoui"
+    short_word = []
     try:
         word = [char for char in word if char not in vowels]
-        short_word = []
         for char in word:
             short_word.append(char)
         return ''.join(short_word)
