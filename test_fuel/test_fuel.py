@@ -19,4 +19,5 @@ def test_value_error():
         convert("100/1")
         convert("1.1/1")
         convert("aa/nb")
+        convert("-1/2")
         gauge(-1)
