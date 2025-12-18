@@ -29,14 +29,14 @@ def gauge(percentage):
             output = "E"
         elif 99 <= percentage <= 100:
             output = "F"
-        elif percentage > 100:
-            raise ValueError
-        elif percentage < 0:
-            raise ValueError
+        elif 1 < percentage < 99:
+            output = f"{round(int(percentage))}%"
         else:
-            output = f"{round(x)}%"
+            raise ValueError
     except ValueError:
         return "ValueError"
+    except TypeError:
+        return "TypeError"
     return(output)
 
 if __name__ == "__main__":
