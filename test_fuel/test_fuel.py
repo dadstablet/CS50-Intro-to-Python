@@ -20,4 +20,9 @@ def test_zero_div():
     with pytest.raises(ZeroDivisionError):
         convert("100/0")
 
-def test_value_error()
+def test_value_error():
+    with pytest.raises(ValueError):
+        convert("100/1")
+        convert("1.1/1")
+        convert("aa/nb")
+        gauge(-1)
