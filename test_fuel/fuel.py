@@ -9,14 +9,16 @@ def convert(fraction):
             split = fraction.split("/")
             X = int(split[0])
             Y = int(split[1])
-            if X > Y:
-                raise ValueError("Numerator cannot be greater than Denomenator")
+            if Y == 0:
+                return ZeroDivisionError
+            elif X > Y:
+                return ValueError
             else: pass
             percent = int(round((X/Y)*100))
         except ValueError:
-            print("ValueError")
-        except ZeroDivisionError:
-            print("ZeroDivisionError")
+            return ValueError
+        # except ZeroDivisionError:
+        #     print("ZeroDivisionError")
         return (print(gauge(percent)))
 
 def gauge(percentage):
