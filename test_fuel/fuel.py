@@ -11,6 +11,7 @@ def convert(fraction):
             Y = int(split[1])
         if X > Y:
             raise ValueError("Numerator cannot be greater than Denomenator")
+        else: pass
         percent = int(round((X/Y)*100))
         except ValueError:
             print("ValueError")
