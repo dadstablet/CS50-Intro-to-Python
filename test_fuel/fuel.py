@@ -13,7 +13,8 @@ def convert(fraction):
             raise ZeroDivisionError
         elif X > Y:
             raise ValueError
-        else: pass
+        else:
+            pass
         percent = int(round((X/Y)*100))
         return percent
 
