@@ -10,10 +10,12 @@ def convert(fraction):
             X = int(split[0])
             Y = int(split[1])
             percent = int(round((X/Y)*100))
+        except X > Y:
+            raise ValueError
         except ValueError:
-            pass
+            return print("ValueError")
         except ZeroDivisionError:
-            pass
+            return print("ZeroDivisionError")
         return (print(gauge(percent)))
 
 def gauge(percentage):
