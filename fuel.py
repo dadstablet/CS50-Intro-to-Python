@@ -7,9 +7,9 @@ def convert(fraction):
     while True:
         try:
             split = fraction.split("/")
-            numer = int(split[0])
-            denom = int(split[1])
-            percent = int(round((numer/denom)*100))
+            X = int(split[0])
+            Y = int(split[1])
+            percent = int(round((X/Y)*100))
         except ValueError:
             raise ValueError
         except ZeroDivisionError:
