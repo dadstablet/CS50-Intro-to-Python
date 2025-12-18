@@ -11,4 +11,3 @@ def test_h():
 def test_other():
     assert value(123) == 100
     assert value("what") == 100
-
