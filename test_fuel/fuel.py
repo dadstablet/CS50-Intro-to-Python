@@ -5,7 +5,6 @@ def main():
 
 def convert(fraction):
     while True:
-        # try:
         split = fraction.split("/")
         X = int(split[0])
         Y = int(split[1])
@@ -15,8 +14,11 @@ def convert(fraction):
             raise ValueError
         else:
             pass
-        percent = int(round((X/Y)*100))
-        return percent
+        try:
+            percent = int(round((X/Y)*100))
+            return percent
+        except ValueError:
+            return "ValueError"
 
 def gauge(percentage):
     try:
