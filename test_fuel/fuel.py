@@ -12,7 +12,10 @@ def convert(fraction):
             raise ZeroDivisionError
         elif X > Y:
             raise ValueError
-        elif X
+        elif X < 0:
+            raise ValueError
+        elif Y < 0:
+            raise ValueError
         else:
             pass
         try:
