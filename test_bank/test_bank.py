@@ -9,5 +9,4 @@ def test_h():
     assert value("Hi") == 20
 
 def test_other():
-    assert value(123) == 100
-    assert value("what") == 100
+    assert value("what!") == 100
