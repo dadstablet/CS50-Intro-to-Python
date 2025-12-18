@@ -11,11 +11,10 @@ def convert(fraction):
             denom = int(split[1])
             percent = int(round((numer/denom)*100))
         except ValueError:
-            main()
+            raise ValueError
         except ZeroDivisionError:
-            main()
-        else:
-            return (print(result(percent)))
+            raise ZeroDivisionError
+        return (print(result(percent)))
 
 def gauge(percentage):
     if 0 <= percentage <= 1:
