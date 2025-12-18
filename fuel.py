@@ -6,7 +6,7 @@ def main():
 def convert(fraction):
     while True:
         try:
-            split = input.split("/")
+            split = fraction.split("/")
             numer = int(split[0])
             denom = int(split[1])
             percent = int(round((numer/denom)*100))
@@ -17,14 +17,14 @@ def convert(fraction):
         else:
             return (print(result(percent)))
 
-def result(x):
-    if 0 <= x <= 1:
+def gauge(percentage):
+    if 0 <= percentage <= 1:
         output = "E"
-    elif 99 <= x <= 100:
+    elif 99 <= percentage <= 100:
         output = "F"
-    elif x > 100:
+    elif percentage > 100:
         return main()
-    elif x < 0:
+    elif percentage < 0:
         return main()
     else:
         output = f"{round(x)}%"
