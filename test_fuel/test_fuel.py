@@ -23,3 +23,4 @@ def test_value_error():
         convert("1/-2")
         convert("-1/-2")
         gauge(-1)
+        gauge(-.2)
