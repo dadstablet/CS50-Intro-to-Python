@@ -1,4 +1,5 @@
 from plates import is_valid
 
-def test_0:
+def test_valid():
+    assert is_valid("AAA222") == "Valid"
 
