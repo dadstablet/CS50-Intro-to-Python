@@ -10,13 +10,13 @@ def convert(fraction):
             X = int(split[0])
             Y = int(split[1])
             if Y == 0:
-                return ZeroDivisionError
+                raise ZeroDivisionError
             elif X > Y:
-                return ValueError
+                raise ValueError
             else: pass
             percent = int(round((X/Y)*100))
         except ValueError:
-            return ValueError
+            return "ValueError"
         # except ZeroDivisionError:
         #     print("ZeroDivisionError")
         return percent

@@ -8,5 +8,5 @@ def test_convert():
     assert convert("aaa/bbb") == ValueError
     assert convert("1/2") == 50
 
-def test_gauge():
-    
+# def test_gauge():
+
