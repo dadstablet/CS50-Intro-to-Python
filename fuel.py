@@ -11,7 +11,7 @@ def convert(fraction):
             denom = int(split[1])
             percent = int(round((numer/denom)*100))
         except ValueError:
-            
+            main()
         except ZeroDivisionError:
             main()
         else:
