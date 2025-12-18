@@ -24,16 +24,19 @@ def convert(fraction):
         return percent
 
 def gauge(percentage):
-    if 0 <= percentage <= 1:
-        output = "E"
-    elif 99 <= percentage <= 100:
-        output = "F"
-    elif percentage > 100:
-        return ValueError
-    elif percentage < 0:
-        return ValueError
-    else:
-        output = f"{round(x)}%"
+    try:
+        if 0 <= percentage <= 1:
+            output = "E"
+        elif 99 <= percentage <= 100:
+            output = "F"
+        elif percentage > 100:
+            raise ValueError
+        elif percentage < 0:
+            raise ValueError
+        else:
+            output = f"{round(x)}%"
+    except ValueError:
+        return "ValueError"
     return(output)
 
 if __name__ == "__main__":
