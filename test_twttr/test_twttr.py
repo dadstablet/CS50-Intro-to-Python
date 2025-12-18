@@ -2,8 +2,8 @@ from twttr import shorten
 import random
 
 def test_heLLO():
-    x = 'heLLO'
-    assert shorten(x) == "hLL"
+    x = 'heLLO.'
+    assert shorten(x) == "hLL."
 
 def test_HELLO():
     x = 'HELLO1'
