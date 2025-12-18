@@ -1,6 +1,6 @@
 def main():
     x = input("Fraction: ")
-    return(fuel(x))
+    return(convert(x))
 
 
 def convert(fraction):
@@ -14,7 +14,7 @@ def convert(fraction):
             raise ValueError
         except ZeroDivisionError:
             raise ZeroDivisionError
-        return (print(result(percent)))
+        return (print(gauge(percent)))
 
 def gauge(percentage):
     if 0 <= percentage <= 1:
