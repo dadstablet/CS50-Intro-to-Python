@@ -3,7 +3,7 @@ def main():
     return(fuel(x))
 
 
-def fuel(input):
+def convert(fraction):
     while True:
         try:
             split = input.split("/")
@@ -11,7 +11,7 @@ def fuel(input):
             denom = int(split[1])
             percent = int(round((numer/denom)*100))
         except ValueError:
-            main()
+            
         except ZeroDivisionError:
             main()
         else:
