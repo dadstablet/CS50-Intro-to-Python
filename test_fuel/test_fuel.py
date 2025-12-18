@@ -1,5 +1,6 @@
 from fuel import convert
 from fuel import gauge
+import pytest
 
 def test_convert():
     # assert convert("100/0") == "ZeroDivisionError"
@@ -15,3 +16,8 @@ def test_gauge():
 #     assert gauge("E") == "TypeError"
 #     assert gauge(-199) == "ValueError"
 
+def test_zero_div():
+    with pytest.raises(ZeroDivisionError):
+        convert("100/0")
+
+def test_value_error()
