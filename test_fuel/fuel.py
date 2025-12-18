@@ -19,7 +19,7 @@ def convert(fraction):
             return ValueError
         # except ZeroDivisionError:
         #     print("ZeroDivisionError")
-        return (print(gauge(percent)))
+        return percent
 
 def gauge(percentage):
     if 0 <= percentage <= 1:
