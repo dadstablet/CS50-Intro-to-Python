@@ -3,8 +3,9 @@ from plates import is_valid
 def test_True():
     assert is_valid("AAA222") == True
 
-def test_short():
+def test_len():
     assert is_valid("H") == False
+    assert is_valid("OUTATIME") == False
 
 def test_nums():
     assert is_valid("AAA022") == False
