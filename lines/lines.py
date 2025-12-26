@@ -1,7 +1,7 @@
 import sys
 
 def main():
-    x = sys.argv[1]
+    x = sys.argv[1:]
     print(get_file(x))
 
 def get_file(f):
