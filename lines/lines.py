@@ -2,7 +2,7 @@ import sys
 
 def main():
     x = sys.argv[1:]
-    print(get_file(x))
+    get_file(x)
 
 def get_file(f):
     f_list = f.split(" ")
@@ -17,3 +17,6 @@ def check(usr_inpt):
             raise FileNotFoundError
     except FileNotFoundError:
         sys.exit("File does not exist")
+
+if __name__ == "__main__":
+    main()
