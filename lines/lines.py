@@ -5,9 +5,7 @@ def main():
     get_file(x)
 
 def get_file(f):
-    f_list = f.split(" ")
-    return f_list
-
+    
 
 def check(usr_inpt):
     try:
