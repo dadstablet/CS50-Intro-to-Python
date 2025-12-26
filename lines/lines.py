@@ -6,8 +6,8 @@ def main():
 
 
 def check(f):
-    f < 2
     try:
+        
         if f :#contains .py and leads to existing file
             pass
         else:
