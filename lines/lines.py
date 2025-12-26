@@ -5,7 +5,7 @@ def main():
     get_file(x)
 
 def get_file(f):
-    
+    file = f.index()
 
 def check(usr_inpt):
     try:
