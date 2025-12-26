@@ -1,7 +1,8 @@
 import sys
 
 def main():
-    x = input()
+    x = sys.argv[1]
+    check(x)
 
 def check(usr_inpt):
     try:
@@ -10,4 +11,4 @@ def check(usr_inpt):
         else:
             raise FileNotFoundError
     except FileNotFoundError:
-        
+        sys.exit("File does not exist")
