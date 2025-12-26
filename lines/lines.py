@@ -2,10 +2,12 @@ import sys
 
 def main():
     x = sys.argv[1]
-    check(x)
+    print(get_file(x))
 
 def get_file(f):
-    f.split
+    f_list = f.split(" ")
+    return f_list
+
 
 def check(usr_inpt):
     try:
