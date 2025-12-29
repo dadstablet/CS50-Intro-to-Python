@@ -8,12 +8,11 @@ def main():
 def check(f):
     try:
         with open(f, "r") as file:
-            if f :#contains .py and leads to existing file
-                pass
-            else:
-                raise FileNotFoundError
-        except FileNotFoundError:
-            sys.exit("File does not exist")
+            for line in file:
+                line_count += count(line)
+        return line_count
+    except FileNotFoundError:
+        sys.exit("File does not exist")
 
 if __name__ == "__main__":
     main()
