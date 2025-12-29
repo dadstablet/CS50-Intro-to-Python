@@ -5,7 +5,10 @@ def main():
     print(check(x))
 
 def check(f):
-    f_filetype = f.lstrip(".py")
+    if f.lstrip(".py"):
+        pass
+    else:
+        sys.exit("Not a Python file")
     try:
         line_count = 0
         with open(f, "r") as file:
