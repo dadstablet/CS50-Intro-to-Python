@@ -2,7 +2,7 @@ import sys
 
 def main():
     x = sys.argv[1]
-    check(x)
+    print(check(x))
 
 def check(f):
     try:
