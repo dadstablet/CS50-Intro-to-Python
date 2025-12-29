@@ -5,7 +5,7 @@ def main():
     print(check(x))
 
 def check(f):
-    if f 
+    f_filetype = f.lstrip(".py")
     try:
         line_count = 0
         with open(f, "r") as file:
