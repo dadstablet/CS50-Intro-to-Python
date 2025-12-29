@@ -5,6 +5,7 @@ def main():
     print(check(x))
 
 def check(f):
+    if f 
     try:
         line_count = 0
         with open(f, "r") as file:
