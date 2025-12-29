@@ -8,6 +8,7 @@ def check(f):
     try:
         with open(f, "r") as file:
             for line in file:
+                if line.startswith
                 line_count += count(line)
         return line_count
     except FileNotFoundError:
