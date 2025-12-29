@@ -13,7 +13,7 @@ def check(f):
                     line_count += 0
                 else:
                     line_count += 1
-        return line_count
+            return line_count
     except FileNotFoundError:
         sys.exit("File does not exist")
 
