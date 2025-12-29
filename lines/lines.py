@@ -4,7 +4,6 @@ def main():
     x = sys.argv[1]
     check(x)
 
-
 def check(f):
     try:
         with open(f, "r") as file:
