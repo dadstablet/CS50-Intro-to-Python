@@ -5,7 +5,7 @@ def main():
     print(check(x))
 
 def check(f):
-    if f.lstrip(".py"):
+    if f.removesuffix(".py"):
         pass
     else:
         sys.exit("Not a Python file")
