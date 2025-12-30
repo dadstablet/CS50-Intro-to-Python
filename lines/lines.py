@@ -20,8 +20,8 @@ def line_count(f):
             for line in file:
                 if line.lstrip().startswith("#"):
                     line_count += 0
-                # elif line.lstrip().startswith(""):
-                #     line_count += 0
+                elif line.startswith("\n"):
+                    line_count += 0
                 else:
                     line_count += 1
             return line_count
