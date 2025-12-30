@@ -4,11 +4,13 @@ def main():
     x = sys.argv[1]
     print(check(x))
 
-def check(f):
+def check_file(f):
     if ".py" in f:
         pass
     else:
         sys.exit("Not a Python file")
+
+def line_count(f):
     try:
         line_count = 0
         with open(f, "r") as file:
