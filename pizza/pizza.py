@@ -11,15 +11,13 @@ def main():
     else:
         try:
             read_file(usr_input)
-        except 
-
+        except FileNotFoundError:
+            sys.exit("File does not exist")
 
 def read_file(x):
-    with open("sicilian.csv", "r") as sicilian, open("regular.csv", "r") as regular:
-        sicilian = csv.DictReader(sicilian)
-        regular = csv.DictReader(regular)
-
-        print(tabulate.tabulate(sicilian))
+    with open(x, "r") as pizza:
+        pizza = csv.DictReader(pizza)
+        print(tabulate.tabulate(pizza))
 
 if __name__ == "__main__":
     main()
