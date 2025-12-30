@@ -6,8 +6,7 @@ def main():
         sicilian = csv.DictReader(sicilian)
         regular = csv.DictReader(regular)
 
-        for row in sicilian:
-            print(row)
+        print(tabulate.tabulate(sicilian))
 
 if __name__ == "__main__":
     main()
