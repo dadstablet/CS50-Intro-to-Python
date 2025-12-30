@@ -6,8 +6,8 @@ def main():
 def check_file():
     x = sys.argv[:]
     if ".py" in x[1]:
-        pass
-    elif x.count() > 1:
+        return x[1]
+    elif x.count() > 2:
         sys.exit("Too many command-line arguments")
     else:
         sys.exit("Not a Python file")
