@@ -1,12 +1,14 @@
 import sys
 
 def main():
-    x = sys.argv[1]
-    print(check(x))
+    check_file()
 
-def check_file(f):
-    if ".py" in f:
+def check_file():
+    x = sys.argv[:]
+    if ".py" in x[1]:
         pass
+    elif x.count() > 1:
+        sys.exit("Too many command-line arguments")
     else:
         sys.exit("Not a Python file")
 
