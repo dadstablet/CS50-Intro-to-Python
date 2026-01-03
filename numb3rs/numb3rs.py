@@ -13,6 +13,8 @@ def validate(ip):
     # else:
     #     return "False"
     ip_split = ip.split(".")
+    for num in ip_split:
+        re.search(r"[0-9]+", num)
     return ip_split
 
 
