@@ -10,9 +10,10 @@ def validate(ip):
     # if re.search(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$",ip):
     #     return "True"
     # has to be 0-255. cannot be 001
-    re.search(r"[0-2]2
-    else:
-        return "False"
+    # else:
+    #     return "False"
+    ip_split = ip.split(".")
+    return ip_split
 
 
 ...
