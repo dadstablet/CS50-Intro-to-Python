@@ -19,14 +19,11 @@ def validate(ip):
                 raise Exception("Invalid. Cannot lead with 0")
             elif int(x) > 255:
                 raise Exception("Invalid. Cannot be >255")
+            else:
+                pass
         return "Valid"
-    except ValueError:
-        sys.exit("Value Error")
-    # else:
-    #     return match.group(1)
-
-
-...
+    except AttributeError:
+        sys.exit("Invalid. Must be integer")
 
 
 if __name__ == "__main__":
