@@ -17,8 +17,10 @@ def validate(ip):
         for x in match.groups():
             if match.group(x).startswith("0") and match.group(x) != "0": #starts with 0. should not pass
                 raise Exception("Invalid. Cannot lead with 0")
-            else:
-                match.group(x)
+            elif int(match.group(x)) > 255:
+                raise Exception("Invalid. Cannot be >255")
+    except ValueError:
+        
     # else:
     #     return match.group(1)
 
