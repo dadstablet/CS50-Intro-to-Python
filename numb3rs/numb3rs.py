@@ -20,7 +20,7 @@ def validate(ip):
             elif int(match.group(x)) > 255:
                 raise Exception("Invalid. Cannot be >255")
     except ValueError:
-        
+        sys.exit("Value Error")
     # else:
     #     return match.group(1)
 
