@@ -12,7 +12,7 @@ def validate(ip):
     # has to be 0-255. cannot be 001
     # else:
     #     return "False"
-    match = re.search(r"^([0-9]{1,3})\.$",ip)
+    match = re.search(r"^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$",ip)
 
     if match.group(1).startswith("0") and match.group(1) != "0": #starts with 0. should not pass
         return "Invalid"
