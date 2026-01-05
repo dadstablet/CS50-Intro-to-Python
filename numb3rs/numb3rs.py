@@ -12,11 +12,11 @@ def validate(ip):
     # has to be 0-255. cannot be 001
     # else:
     #     return "False"
-    ip_split = ip.split(".")
-    for num in ip_split:
-        re.search(r"[0-9]+", num)
-    return ip_split
-
+    match = re.search(r"^([0-9]{1,3})\.$",ip)
+    # if match.group(1) <= 255:
+    #     return match.group(1)
+    for digit in match.group(1):
+        
 
 ...
 
