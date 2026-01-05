@@ -15,10 +15,10 @@ def validate(ip):
     match = re.search(r"^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$",ip)
     for x in match:
         if match.group(x)
-    if match.group(1).startswith("0") and match.group(1) != "0": #starts with 0. should not pass
-        return "Invalid"
-    else:
-        return match.group(1)
+    # if match.group(1).startswith("0") and match.group(1) != "0": #starts with 0. should not pass
+    #     return "Invalid"
+    # else:
+    #     return match.group(1)
 
 
 ...
