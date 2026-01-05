@@ -14,9 +14,9 @@ def validate(ip):
     #     return "False"
     match = re.search(r"^([0-9]{1,3})\.$",ip)
     # if match.group(1) <= 255:
-    #     return match.group(1)
-    for digit in match.group(1):
-        
+    return int(match.group(1))
+
+
 
 ...
 
