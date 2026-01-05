@@ -15,10 +15,11 @@ def validate(ip):
     try:
         match = re.search(r"^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$",ip)
         for x in match.groups():
-            if match.group(x).startswith("0") and match.group(x) != "0": #starts with 0. should not pass
+            if x.startswith("0") and x != "0": #starts with 0. should not pass
                 raise Exception("Invalid. Cannot lead with 0")
-            elif int(match.group(x)) > 255:
+            elif int(x) > 255:
                 raise Exception("Invalid. Cannot be >255")
+        return "Valid"
     except ValueError:
         sys.exit("Value Error")
     # else:
