@@ -23,7 +23,7 @@ def validate(ip):
                 pass
         return "Valid"
     except AttributeError:
-        sys.exit("Invalid")
+        return "Invalid"
 
 
 if __name__ == "__main__":
