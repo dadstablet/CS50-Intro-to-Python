@@ -13,7 +13,7 @@ def validate(ip):
     # else:
     #     return "False"
     match = re.search(r"^([0-9]{1,3})\.$",ip)
-    # if match.group(1) <= 255:
+
     if match.group(1).startswith("0"): #only contains 0 or starts with 0. should not pass
         return "Invalid"
     else:
