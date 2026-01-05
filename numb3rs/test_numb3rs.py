@@ -3,7 +3,7 @@ import pytest
 
 def test_lead0():
     assert validate("001.22.22.22") == "False"
-    # assert validate("0.00.00.0") == "False"
+    assert validate("0.0.0.0") == "True"
 
 # def test_chars():
 #     assert validate("dog.cat") == "False"
