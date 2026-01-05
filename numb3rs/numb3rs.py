@@ -17,9 +17,8 @@ def validate(ip):
         for x in match.groups():
             if x.startswith("0") and x != "0": #starts with 0. should not pass
                 return "False"
-            # INTENTIONALLY REMOVED to ensure test_numb3rs.py works
-            # elif int(x) > 255:
-            #     return "False"
+            elif int(x) > 255:
+                return "False"
             else:
                 pass
         return "True"
