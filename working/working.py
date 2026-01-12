@@ -7,8 +7,8 @@ def main():
 
 
 def convert(s):
-    re.search()
-
+    # re.search(r/"9:00 AM to 5:00 PM",s)
+    re.search(r/"1?[0-9]:00 AM to 5:00 PM",s)
 
 ...
 
