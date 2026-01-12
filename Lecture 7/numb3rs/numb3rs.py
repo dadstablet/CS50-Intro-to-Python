@@ -16,14 +16,14 @@ def validate(ip):
         match = re.search(r"^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$",ip)
         for x in match.groups():
             if x.startswith("0") and x != "0": #starts with 0. should not pass
-                return "False"
+                return False
             elif int(x) > 255:
-                return "False"
+                return False
             else:
                 pass
-        return "True"
+        return True
     except AttributeError:
-        return "False"
+        return False
 
 
 if __name__ == "__main__":
