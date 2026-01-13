@@ -9,9 +9,9 @@ def main():
 def convert(s):
     # re.search(r"9:00 AM to 5:00 PM",s)
     try:
-        time = re.search(r"^(([1-2]?[0-9]){1}:?([0-5][0-9])?) (am|pm|AM|PM) to ((?:[1-2]?[0-9]){1}(?::[0-5][0-9])?) (am|pm|AM|PM)$",s)
-        start_hour, start_day, end_time, end_day = time.groups()
-        return start_hour, start_day, end_time, end_day
+        time = re.search(r"^([1-2]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM) to ([1-2]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM)$",s)
+        # start_hour, start_min, end_time, end_day = time.groups()
+        return time.groups()
     except AttributeError:
         sys.exit("AttributeError")
 
