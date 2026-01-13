@@ -15,6 +15,5 @@ def convert(s):
     except AttributeError:
         sys.exit("AttributeError")
 
-
 if __name__ == "__main__":
     main()
