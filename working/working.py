@@ -15,13 +15,14 @@ def convert(s):
         time = re.search(r"^([1-2]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM) to ([1-2]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM)$",s)
         start_hour, start_min, start_day, end_hour, end_min, end_day = time.groups()
         # return start_hour, start_min, start_day, end_hour, end_min, end_day
-        if start_day.lower() == "am" and int(start_hour) < 10:
-            start_hour = "0"+start_hour
-        elif start_day.lower() == "am" and int(start_hour) < 12:
-            start_hour = start_hour
-        elif start_day.lower() == "am" and int(start_hour) == 12:
-            start_hour = "00"
-        return f"{start_hour}:{start_min} {start_day}"
+        if start_day.lower() == "am":
+            if int(start_hour) < 10:
+                start_hour = "0"+start_hour
+            elif 10 < int(start_hour) < 12:
+                start_hour = start_hour
+            elif int(start_hour) == 12:
+                start_hour = "00"
+        return f"{start_hour}:{start_min} {start_day.upper()}"
     except AttributeError:
         sys.exit("AttributeError")
 
