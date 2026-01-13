@@ -1,6 +1,9 @@
 import re
 import sys
 
+convert_time = {
+    "12 am" : "00"
+}
 
 def main():
     print(convert(input("Hours: ")))
