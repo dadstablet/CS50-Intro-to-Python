@@ -22,7 +22,7 @@ def convert(s):
                 start_hour = start_hour
             elif int(start_hour) == 12:
                 start_hour = "00"
-        el
+        elif 
         return f"{start_hour}:{start_min} {start_day.upper()}"
     except AttributeError:
         sys.exit("AttributeError")
