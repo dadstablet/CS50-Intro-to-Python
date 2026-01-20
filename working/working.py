@@ -17,9 +17,9 @@ def convert(s):
     except AttributeError:
         sys.exit("AttributeError")
 
-    for time in s_list:
+    for item in s_list:
         try
-            re.search(r"^([1]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM), time)
+            time = re.search(r"^([1]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM), time)
             start_hour, start_min, start_day = time.groups()
             if start_day.lower() == "am":
                 if int(start_hour) < 10:
