@@ -1,10 +1,6 @@
 import re
 import sys
 
-convert_time = {
-    "12 am" : "00"
-}
-
 def main():
     print(convert(input("Hours: ")))
 
@@ -34,8 +30,7 @@ def convert(s):
                 elif int(start_hour) < 12:
                     start_hour = int(start_hour)
                     start_hour = start_hour + 12
-
-            return f"{start_hour}:{start_min} {start_day.upper()}"
+            time = {start_hour}:{start_min} {start_day.upper()}
             # return time.groups()
         except AttributeError:
             sys.exit("AttributeError")
