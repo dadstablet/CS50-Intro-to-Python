@@ -33,7 +33,7 @@ def convert(s):
                     start_hour = start_hour + 12
             if start_min == None:
                 start_min = "00"
-            else start_min:
+            else:
                 pass
             time = f"{start_hour}:{start_min}"
             s_list_new.append(time)
