@@ -31,7 +31,7 @@ def convert(s):
                 elif int(start_hour) < 12:
                     start_hour = int(start_hour)
                     start_hour = start_hour + 12
-            time = f"{start_hour}:{start_min} {start_day.upper()}"
+            time = f"{start_hour}:{start_min}"
             s_list_new.append(time)
         except AttributeError:
             sys.exit("AttributeError")
