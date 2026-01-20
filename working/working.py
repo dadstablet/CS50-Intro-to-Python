@@ -8,10 +8,12 @@ def main():
 def convert(s):
     # re.search(r"9:00 AM to 5:00 PM",s)
     try:
-        s_list = s.split(" to ", 1)
-        # return s_list
-    except AttributeError:
-        sys.exit("AttributeError")
+        if re.search(r" to ", s) == True:
+            s_list = s.split(" to ", 1)
+        else:
+            raise ValueError
+    except ValueError:
+        sys.exit("ValueError")
 
     s_list_new = []
     for item in s_list:
