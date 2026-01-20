@@ -13,9 +13,13 @@ def convert(s):
     # re.search(r"9:00 AM to 5:00 PM",s)
     try:
         s_list = s.split(" to ", 1)
-    try:
-        for time in s_list:
-            re.search(r"^([1]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM), time
+        return s_list
+    except AttributeError:
+        sys.exit("AttributeError")
+
+    for time in s_list:
+        try
+            re.search(r"^([1]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM), time)
             start_hour, start_min, start_day = time.groups()
             if start_day.lower() == "am":
                 if int(start_hour) < 10:
