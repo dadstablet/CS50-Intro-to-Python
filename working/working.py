@@ -25,7 +25,7 @@ def convert(s):
             if int(start_hour) == 12:
                 start_hour = "12"
             elif int(start_hour) < 12:
-                start_hour = start_hour+12
+                start_hour = start_hour + 12
 
         return f"{start_hour}:{start_min} {start_day.upper()}"
         # return time.groups()
