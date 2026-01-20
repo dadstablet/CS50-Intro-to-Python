@@ -39,7 +39,7 @@ def convert(s):
             s_list_new.append(time)
         except AttributeError:
             sys.exit("AttributeError")
-    return s_list_new
+    return f"{s_list_new[0]} to {s_list_new[1]}"
 
 
 if __name__ == "__main__":
