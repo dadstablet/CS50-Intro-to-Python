@@ -13,6 +13,7 @@ def convert(s):
     except AttributeError:
         sys.exit("AttributeError")
 
+    s_list_new = []
     for item in s_list:
         try:
             time = re.search(r"^([1]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM)", item)
@@ -31,9 +32,10 @@ def convert(s):
                     start_hour = int(start_hour)
                     start_hour = start_hour + 12
             time = f"{start_hour}:{start_min} {start_day.upper()}"
-            # return time.groups()
+            s_list_new.append(time)
         except AttributeError:
             sys.exit("AttributeError")
+    return s_list_new
 
 
 if __name__ == "__main__":
