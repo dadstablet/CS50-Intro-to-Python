@@ -21,13 +21,13 @@ def convert(s):
                 start_hour = start_hour
             elif int(start_hour) == 12:
                 start_hour = "00"
-        elif end_day.lower() == "pm":
-            if int(start_hour) < 10:
-                start_hour = "0"+start_hour
-            elif 10 < int(start_hour) < 12:
-                start_hour = start_hour
+        elif start_day.lower() == "pm":
             elif int(start_hour) == 12:
-                start_hour = "00"
+                start_hour = "12"
+            elif int(start_hour) < 12:
+                start_hour = start_hour+12
+            if int(start_hour) < 10:
+                start_hour = start_hour
 
         return f"{start_hour}:{start_min} {start_day.upper()}"
         # return time.groups()
