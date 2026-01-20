@@ -30,7 +30,7 @@ def convert(s):
                 start_hour = "00"
 
         return f"{start_hour}:{start_min} {start_day.upper()}"
-                return time.groups()
+        # return time.groups()
     except AttributeError:
         sys.exit("AttributeError")
 
