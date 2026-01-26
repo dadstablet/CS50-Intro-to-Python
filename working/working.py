@@ -37,7 +37,9 @@ def convert(s):
             time = f"{start_hour}:{start_min}"
             s_list_new.append(time)
         except ValueError:
-            sys.exit("Error")
+            sys.exit("ValueError")
+        except AttributeError:
+            sys.exit("AttributeError")
     return f"{s_list_new[0]} to {s_list_new[1]}"
 
 
