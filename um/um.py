@@ -7,8 +7,11 @@ def main():
 
 
 def count(s):
-    um_count = re.search(r"(um",s)
-    return um_count
+    um_count = re.search(r"(um){1}",s)
+    ums = 0
+    for groups in um_count.groups():
+        ums += 1
+    return ums
 ...
 
 
