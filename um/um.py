@@ -7,7 +7,9 @@ def main():
 
 
 def count(s):
-    um_count = re.search(r"(um)+",s)
+    ums = 0
+    for char in s:
+        re.search(r"(um)",char)
     return um_count.groups()
 ...
 
