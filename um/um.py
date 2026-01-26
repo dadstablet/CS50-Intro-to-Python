@@ -7,10 +7,14 @@ def main():
 
 
 def count(s):
+    s_list = s.split(" ")
     ums = 0
-    for char in s:
-        re.search(r"(um)",char)
-    return um_count.groups()
+    for char in s_list:
+        if re.search(r"[um]",char) == True:
+            ums += 1
+        else:
+            pass
+    return ums
 ...
 
 
