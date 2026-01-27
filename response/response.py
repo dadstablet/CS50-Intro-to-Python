@@ -1,13 +1,13 @@
-from validator_collection import checkers
+from validator_collection import validators
+import sys
 
 def main():
-    print(validate(input("Email: ")))
-
-def validate(e):
-    if e.is_email() == True:
-        return "Valid"
-    else:
-        return "Invalid"
+    usr_email = input("Email: ")
+    try:
+        validators.email(usr_email)
+        return usr_email
+    except:
+        sys.exit("invalid email")
 
 if __name__ == "__main__":
     main()
