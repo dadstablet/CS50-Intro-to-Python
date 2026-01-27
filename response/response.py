@@ -5,9 +5,9 @@ def main():
     usr_email = input("Email: ")
     try:
         validators.email(usr_email)
-        return usr_email
+        return "Valid"
     except:
-        sys.exit("invalid email")
+        sys.exit("Invalid")
 
 if __name__ == "__main__":
     main()
