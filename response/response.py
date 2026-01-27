@@ -1,4 +1,4 @@
-from validator_collection import validators
+from validator_collection import validators, errors
 import sys
 
 def main():
@@ -6,7 +6,7 @@ def main():
     try:
         validators.email(usr_email)
         print("Valid")
-    except validator_collection.errors.InvalidEmailError:
+    except validators.errors.InvalidEmailError:
         print("Invalid")
 
 if __name__ == "__main__":
