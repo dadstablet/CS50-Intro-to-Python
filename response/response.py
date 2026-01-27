@@ -1,3 +1,4 @@
+from validator_collection import checkers
 
 def main():
     print(validate(input("Email: ")))
