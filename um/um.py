@@ -10,7 +10,7 @@ def count(s):
     s_list = s.split(" ")
     ums = 0
     for char in s_list:
-        if re.search(r"[^a-z]*um[^a-z]*",char):
+        if re.search(r"^[^a-zA-Z]*um[^a-zA-Z]*$",char):
             ums += 1
         else:
             pass
