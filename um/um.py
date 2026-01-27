@@ -10,10 +10,11 @@ def count(s):
     s_list = s.split(" ")
     ums = 0
     for char in s_list:
-        word_search = re.search(r"(um)",char)
-        return word_search.group(1)
-
-    # return ums
+        if re.search(r"um",char):
+            ums += 1
+        else:
+            pass
+    return ums
     # return s_list
 ...
 
