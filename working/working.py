@@ -10,7 +10,7 @@ def convert(s):
     if " to " in s:
         s_list = s.split(" to ", 1)
     else:
-        sys.exit("ValueError")
+        raise ValueError
 
     s_list_new = []
     for item in s_list:
