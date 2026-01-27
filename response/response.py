@@ -3,11 +3,10 @@ import sys
 
 def main():
     usr_email = input("Email: ")
-    try:
-        validators.email(usr_email)
-        return print("Valid")
-    except:
-        sys.exit("Invalid")
+    if validators.email(usr_email):
+        print("Valid")
+    else:
+        print("Invalid")
 
 if __name__ == "__main__":
     main()
