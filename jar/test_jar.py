@@ -16,10 +16,9 @@ def test_str():
 
 
 def test_deposit():
-    jar = Jar()
-    assert jar.deposit(13) == ValueError
-
-test_deposit()
+    with pytest.raises(ValueError):
+        jar = Jar()
+        jar.deposit(13)
 
 # def test_withdraw():
 #     jar = Jar()
