@@ -3,7 +3,7 @@ class Jar:
         self._capacity = capacity
 
     def __str__(self):
-        return f"{self._capacity * 🍪}"
+        return f"{self._capacity * 'cookie'}"
 
     def deposit(self, n):
         self._capacity += n
