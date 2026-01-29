@@ -7,14 +7,14 @@ def main():
 
 def convert(s):
     # re.search(r"9:00 AM to 5:00 PM",s)
-    if " to " in s:
-        s_list = s.split(" to ", 1)
-    else:
-        raise ValueError
+    try:
+        if " to " in s:
+            s_list = s.split(" to ", 1)
+        else:
+            raise ValueError
 
-    s_list_new = []
-    for item in s_list:
-        try:
+        s_list_new = []
+        for item in s_list:
             time = re.search(r"^([1]?[0-9]){1}:?([0-5][0-9])? (am|pm|AM|PM)", item)
             start_hour, start_min, start_day = time.groups()
             if start_day.lower() == "am":
@@ -36,10 +36,10 @@ def convert(s):
                 pass
             time = f"{start_hour}:{start_min}"
             s_list_new.append(time)
-        except ValueError:
-            sys.exit("ValueError")
-        except AttributeError:
-            sys.exit("AttributeError")
+    except AttributeError: #added because check wants ValueError, not AttributeError
+        raise ValueError
+    except ValueError:
+        sys.exit("ValueError")
     return f"{s_list_new[0]} to {s_list_new[1]}"
 
 
