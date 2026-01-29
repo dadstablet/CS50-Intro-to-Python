@@ -2,7 +2,8 @@ from jar import Jar
 
 
 def test_init():
-    ...
+    jar = Jar()
+    assert jar.capacity() == 12
 
 
 def test_str():
@@ -15,10 +16,10 @@ def test_str():
 
 
 def test_deposit():
-    # jar = Jar()
-    # jar.deposit(13)
-    # assert str(jar) == ValueError
+    jar = Jar()
+    assert jar.deposit(13) == ValueError
 
 
 def test_withdraw():
-    ...
+    jar = Jar()
+    assert jar.withdraw(1) == ValueError
