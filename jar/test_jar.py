@@ -3,7 +3,7 @@ from jar import Jar
 
 def test_init():
     jar = Jar()
-    assert deposit(jar, ) == 12
+    assert jar.capacity == 12
 
 
 def test_str():
