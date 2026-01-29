@@ -1,5 +1,5 @@
 class Jar:
-    def __init__(self, capacity=12):
+    def __init__(self, capacity=0):
         if capacity > 12:
             raise ValueError
         elif capacity < 0:
@@ -8,7 +8,7 @@ class Jar:
             self._capacity = capacity
 
     def __str__(self):
-        return f"{self._capacity * 'cookie'}"
+        return f"{self._capacity * '🍪'}"
 
     def deposit(self, n):
         self._capacity += n
