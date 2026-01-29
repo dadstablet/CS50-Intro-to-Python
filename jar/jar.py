@@ -3,15 +3,14 @@ class Jar:
         self._capacity = capacity
 
     def __str__(self):
-        for 
+        #for n cookies in jar, return n cookies
         return "{🍪}"
 
     def deposit(self, n):
-        n = n+1
-        return
+        self._capacity += n
 
     def withdraw(self, n):
-        ...
+        self._capacity -= n
 
     @property
     def capacity(self):
