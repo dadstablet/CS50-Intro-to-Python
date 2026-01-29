@@ -1,6 +1,7 @@
 class Jar:
     def __init__(self, capacity=12):
         self._capacity = capacity
+        self._capcity < 13
 
     def __str__(self):
         return f"{self._capacity * 'cookie'}"
