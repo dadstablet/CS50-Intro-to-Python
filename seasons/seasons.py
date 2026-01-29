@@ -2,15 +2,24 @@ from datetime import date, timedelta
 import sys
 import inflect
 
+inflect = inflect.engine()
+
 
 def main():
-    birth = input("Date of Birth: ")
+    try:
+        print(age_in_days(input("Date of Birth: ")))
+    except ValueError:
+        "Invalid Date"
+
+def age_in_days(birth):
     if date.fromisoformat(birth):
         diff = date.today() - date.fromisoformat(birth)
         diff = diff.days * 24 * 60
-        print(diff)
+        diff_words = inflect.number_to_words(diff)
+        return f"{diff_words.capitalize()} minutes"
     else:
-        sys.exit("Invalid date")
+        pass
+        # raise ValueError
 
 ...
 
