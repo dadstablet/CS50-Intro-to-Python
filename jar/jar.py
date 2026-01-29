@@ -7,6 +7,7 @@ class Jar:
 
     def deposit(self, n):
         n = n+1
+        return 
 
     def withdraw(self, n):
         ...
