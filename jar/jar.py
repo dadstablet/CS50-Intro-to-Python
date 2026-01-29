@@ -21,6 +21,7 @@ class Jar:
 
     @property
     def capacity(self):
+        self._capacity == 12
         return self._capcity
 
     @property
