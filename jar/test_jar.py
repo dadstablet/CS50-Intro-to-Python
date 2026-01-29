@@ -17,9 +17,9 @@ def test_str():
 
 def test_deposit():
     jar = Jar()
-    assert jar.deposit(13) == ValueError("ValueError")
-    # assert str(jar) == ValueError
+    assert jar.deposit(13) == ValueError
 
+test_deposit()
 
 # def test_withdraw():
 #     jar = Jar()
