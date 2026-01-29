@@ -18,8 +18,7 @@ def age_in_days(birth):
         diff_words = inflect.number_to_words(diff, andword="")
         return f"{diff_words.capitalize()} minutes"
     else:
-        pass
-        # raise ValueError
+        raise ValueError
 
 ...
 
