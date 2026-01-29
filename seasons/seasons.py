@@ -9,7 +9,7 @@ def main():
     try:
         print(age_in_days(input("Date of Birth: ")))
     except ValueError:
-        "Invalid Date"
+        sys.exit("Invalid Date")
 
 def age_in_days(birth):
     if date.fromisoformat(birth):
