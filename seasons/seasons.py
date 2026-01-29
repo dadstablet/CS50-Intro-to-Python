@@ -15,7 +15,7 @@ def age_in_days(birth):
     if date.fromisoformat(birth):
         diff = date.today() - date.fromisoformat(birth)
         diff = diff.days * 24 * 60
-        diff_words = inflect.number_to_words(diff)
+        diff_words = inflect.number_to_words(diff, andword="")
         return f"{diff_words.capitalize()} minutes"
     else:
         pass
