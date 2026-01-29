@@ -3,7 +3,8 @@ class Jar:
         self._capacity = capacity
 
     def __str__(self):
-        return "{}"
+        for 
+        return "{🍪}"
 
     def deposit(self, n):
         n = n+1
