@@ -6,3 +6,10 @@ class PDF(FPDF):
 
     def shirt(self):
         self.image('/workspaces/153245272/shirtificate/shirtificate.png', align='C')
+
+pdf = PDF()
+pdf.add_page()
+pdf.
+pdf.cell()
+pdf.shirt()
+pdf.output('test.pdf')
