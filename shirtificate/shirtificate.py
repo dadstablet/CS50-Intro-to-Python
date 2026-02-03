@@ -1,8 +1,8 @@
 from fpdf import FPDF
 
 class PDF(FPDF):
-    def __init__(self):
-        self.add_page()
+    # def __init__(self):
+    #     self.add_page()
     def header(self):
         pdf.set_font('Times', size=12)
         self.cell(105, 5, 'CS50 Shirtificate', align='C')
@@ -12,5 +12,6 @@ class PDF(FPDF):
     #     self.image('/workspaces/153245272/shirtificate/shirtificate.png', align='C')
 
 pdf = PDF()
+pdf.add_page()
 pdf.header()
 pdf.output('test.pdf')
