@@ -3,7 +3,7 @@ from fpdf import FPDF
 class PDF(FPDF):
     def header(self):
         pdf.set_font('Times', size=12)
-        self.cell(30, 10, 'CS50 Shirtificate', align='C')
+        self.cell(105, 5, 'CS50 Shirtificate', align='C')
 
     # def shirt(self):
     #     pdf.set_font('Times', size=12)
