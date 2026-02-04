@@ -10,6 +10,8 @@ class PDF(FPDF):
 
     def shirt(self):
         self.image("/workspaces/153245272/shirtificate/shirtificate.png.1", h=pdf.eph, w=pdf.epw/2)
+        if self.oversized_images:
+            return "WARN"
 
 pdf = PDF()
 pdf.add_page()
