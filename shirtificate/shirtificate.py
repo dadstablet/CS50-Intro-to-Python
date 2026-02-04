@@ -10,7 +10,7 @@ class PDF(FPDF):
 
     def shirt(self):
         self.image('/workspaces/153245272/shirtificate/shirtificate.png', 10, 8, 33)
-        self.set_font('Times', size=12)
+        self.cell(80)
 
 pdf = PDF()
 pdf.add_page()
