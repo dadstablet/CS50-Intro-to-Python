@@ -9,7 +9,7 @@ class PDF(FPDF):
         self.cell(30, 10, 'CS50 Shirtificate', align='C')
 
     def shirt(self):
-        self.image("/workspaces/153245272/shirtificate/shirtificate.png.1")
+        self.image("/workspaces/153245272/shirtificate/shirtificate.png.1", h=pdf.eph, w=pdf.epw/2)
 
 pdf = PDF()
 pdf.add_page()
