@@ -13,5 +13,4 @@ class PDF(FPDF):
 
 pdf = PDF()
 pdf.add_page()
-pdf.header()
 pdf.output('test.pdf')
