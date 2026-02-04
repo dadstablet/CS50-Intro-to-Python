@@ -11,7 +11,7 @@ class PDF(FPDF):
     def shirt_name(self, name):
         self.set_text_color(255, 255, 255)
         self.set_font('Times', 'B', size =12)
-        self.image("/workspaces/153245272/shirtificate/shirtificate.png", x=(210-100)/2, y=30, w=100, h=0) #center = page_width - image_width /2
+        self.image("shirtificate/shirtificate.png", x=(210-100)/2, y=30, w=100, h=0) #center = page_width - image_width /2
         self.set_xy((210-100)/2, 30 + 30) #set cursor to atop the shirt
         self.cell(100, 10, f'{name} took CS50', align='C')
 
