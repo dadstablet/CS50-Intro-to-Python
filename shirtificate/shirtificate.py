@@ -7,7 +7,7 @@ class PDF(FPDF):
         self.set_font('Times', size=12)
         self.cell(80)
         self.cell(30, 10, 'CS50 Shirtificate', align='C')
-        self.image("/workspaces/153245272/shirtificate/shirtificate.png.1", h=pdf.eph, w=pdf.epw/2)
+        self.image("/workspaces/153245272/shirtificate/shirtificate.png.1", x=0, y=0)
 
 
 pdf = PDF()
