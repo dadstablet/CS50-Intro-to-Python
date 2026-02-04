@@ -7,11 +7,8 @@ class PDF(FPDF):
         self.set_font('Times', size=12)
         self.cell(80)
         self.cell(30, 10, 'CS50 Shirtificate', align='C')
-
-    def shirt(self):
         self.image("/workspaces/153245272/shirtificate/shirtificate.png.1", h=pdf.eph, w=pdf.epw/2)
-        if self.oversized_images:
-            return "WARN"
+
 
 pdf = PDF()
 pdf.add_page()
