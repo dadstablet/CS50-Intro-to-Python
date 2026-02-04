@@ -9,6 +9,10 @@ class PDF(FPDF):
         self.cell(30, 10, 'CS50 Shirtificate', align='C')
         self.image("/workspaces/153245272/shirtificate/shirtificate.png", x=0, y=0)
 
+    def shirt_name(self, name):
+        self.set_font('Times', size =12)
+        self.cell(80)
+        self.cell(30, 30, f'{name} took CS50', align='C')
 
 pdf = PDF()
 pdf.add_page()
