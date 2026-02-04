@@ -18,6 +18,7 @@ class PDF(FPDF):
 def main():
     usr_name = input('Name: ')
     pdf = PDF()
+    pdf.add_page()
     pdf.shirt_name(name=usr_name)
     pdf.output('shirtificate.pdf')
 
