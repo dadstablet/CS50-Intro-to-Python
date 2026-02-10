@@ -21,7 +21,7 @@ wiki_html = wikipediaapi.Wikipedia(
     language='en',
     extract_format=wikipediaapi.ExtractFormat.HTML
 )
-p_html = wiki_html.page("Test 1")
+p_html = wiki_html.page("List of Classical-era composers")
 print(p_html.text)
 
 
