@@ -7,8 +7,10 @@ page_py = wiki_wiki.page('List of Classical-era composers')
 # print(page_py.summary[0:60])
 
 def print_sections(sections, level=0):
+    section_list = list()
     for s in sections:
-        print(s)
+        section_list.append(s)
+    print(section_list)
 
 print_sections(page_py.sections)
 
