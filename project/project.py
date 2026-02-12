@@ -1,6 +1,6 @@
 import wikipediaapi
 
-wiki_wiki = wikipediaapi.Wikipedia(user_agent='MusicProjectBot (nzakaria@hl.agency)', language='en', extract_format=wikipediaapi.ExtractFormat.HTML)
+wiki_wiki = wikipediaapi.Wikipedia(user_agent='MusicProjectBot (nzakaria@hl.agency)', language='en')
 page_py = wiki_wiki.page('List of Classical-era composers')
 print(page_py)
 
