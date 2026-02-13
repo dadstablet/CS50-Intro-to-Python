@@ -16,7 +16,7 @@ text_list = text.splitlines()
 #separate names and period of life
 composers = {}
 life_test = list()
-d = {"name":[], "birth_year":[], "death_year":[], "period":[]}
+df = pd.DataFrame({"name":[], "birth_year":[], "death_year":[], "period":[]})
 for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
         # composers.update(composer.)
@@ -29,7 +29,7 @@ for composer in text_list:
         # life_test.append(life.group(1))
         grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
         name, birth, death= grouping.groups()
-        d.concat() = {"name":name, "birth_year":birth, "death_year":death}
+        d.concat({"name":name, "birth_year":birth, "death_year":death})
 df = pd.DataFrame(data=d)
 df
 
