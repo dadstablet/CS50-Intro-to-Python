@@ -2,6 +2,6 @@ import wikipedia
 
 wiki = wikipedia.WikipediaPage('List of Classical-era composers')
 
-categories = wiki.categories
+html = wiki.html
 
-print(categories)
+print(html)
