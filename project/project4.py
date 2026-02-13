@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import wikipedia
 import re
+import pandas as pd
+
 
 wiki = wikipedia.WikipediaPage('List of Classical-era composers')
 wiki_html = wiki.html()
