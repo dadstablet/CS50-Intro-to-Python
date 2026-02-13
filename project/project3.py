@@ -12,6 +12,5 @@ text = BeautifulSoup(wiki_html, 'html.parser')
 #next steps: return eras, create list of composers based on eras
 #composers aren't in wikitable, rather a bulletted list under designated era
 
-# eras = text.find_all('h2')
-eras = text.find_all('table', {"class": "wikitable", "class": "sortable"})
+eras = text.find_all('h2')
 print(eras)
