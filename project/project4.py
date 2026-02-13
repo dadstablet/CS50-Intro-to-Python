@@ -28,10 +28,10 @@ for composer in text_list:
         # name = name.group(1).strip()
         # life_test.append(life.group(1))
         grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
-        # name, birth, death= grouping.groups()
         name, birth, death= grouping.groups()
-        append({"name":name, "birth_year":birth, "death_year":death})
-df = pd.DataFrame(data=d)
+        df = name + birth + death
+        # append({"name":name, "birth_year":birth, "death_year":death})
+# df = pd.DataFrame(data=d)
 df
 
 #if life in era. return composer
