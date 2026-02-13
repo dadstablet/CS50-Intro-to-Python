@@ -29,5 +29,14 @@ for composer in text_list:
         composers.update({name:life})
 
 #if life in era. return composer
+eras = {
+    Medieval : '500-1400',
+    Renaissance : '1400-1600',
+    Baroque : '1600-1760',
+    Classical : '1730-1820',
+    Romantic : '1815-1910',
+    Modernist : '1890-1950',
+    Postmodernist : '1930-2026'
+}
 
 print(composers)
