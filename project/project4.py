@@ -11,6 +11,7 @@ text = text.get_text()
 
 text_list = text.splitlines()
 
+#separate names and period of life
 composers = {}
 life_test = list()
 for composer in text_list:
@@ -27,4 +28,3 @@ for composer in text_list:
         composers.update({name:life})
 
 print(composers)
-#separate names and period of life
