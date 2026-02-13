@@ -16,7 +16,8 @@ life_test = list()
 for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
         # composers.update(composer.)
-        life = re.search(r'(\d{4}–\d{4})$', composer)
-        life_test.append(life.group(1))
+        life = re.search(r'\((\d{4})–(\d{4})\)$', composer)
+        birth, death = life.groups()
+        life_test.append(birth)
 print(life_test)
 #separate names and period of life
