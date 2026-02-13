@@ -17,8 +17,8 @@ for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
         # composers.update(composer.)
         # life = re.search(r'\((\d{4})–(\d{4})\)$', composer)
-        composer_ = re.search(r'^([A-Za-z ]+) \((\d{4}–\d{4})\)$', composer)
-        name, life = composer_.groups()
+        hayden = re.search(r'^([A-Za-z ]+) \((\d{4}–\d{4})\)$', composer)
+        name, life = hayden.groups()
         # life_test.append(life.group(1))
         composers.update({name:life})
 
