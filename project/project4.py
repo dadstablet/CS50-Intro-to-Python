@@ -13,7 +13,7 @@ text_list = text.splitlines()
 
 names = []
 for name in text_list:
-    if re.search(r'(+)', name):
+    if re.search(r'Bach ()', name):
         names.append(name)
 
 print(names)
