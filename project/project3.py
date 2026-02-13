@@ -6,4 +6,4 @@ wiki = wikipedia.WikipediaPage('List of Classical-era composers')
 wiki_html = wiki.html()
 
 text = BeautifulSoup(wiki_html, 'html.parser')
-print(text)
+print(text.prettify())
