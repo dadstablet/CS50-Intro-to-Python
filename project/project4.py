@@ -18,7 +18,7 @@ for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
         # composers.update(composer.)
         # life = re.search(r'\((\d{4})–(\d{4})\)$', composer)
-        grouping = re.search(r'([\D^(?:\\xa0)]+[^(?:\\xa0)]*) \((\d{4}–\d{4})\)', composer) #need to remove \xa0[de] from name
+        grouping = re.search(r'([\D]+) \((\d{4}–\d{4})\)', composer) #need to remove \xa0[de] from name
         name, life = grouping.groups()
         # name.strip('\xa0[de]')
         # life = re.search(r'\((\d{4}–\d{4})\)', composer)
