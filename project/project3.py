@@ -1,8 +1,9 @@
 import pandas as pd
-import requests
 from bs4 import BeautifulSoup
+import wikipedia
 
-wiki_url = 'https://en.wikipedia.org/wiki/List_of_Classical-era_composers'
+wiki = wikipedia.WikipediaPage('List of Classical-era composers')
+wiki_html = wiki.html()
 
-text = BeautifulSoup(wiki_url, 'html.parser')
+text = BeautifulSoup(wiki_html, 'html.parser')
 print(text)
