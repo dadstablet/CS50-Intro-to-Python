@@ -11,5 +11,9 @@ text = text.get_text()
 
 text_list = text.splitlines()
 
+names = []
 for name in text_list:
-    if re.search(r'(*)')
+    if re.search(r'(+)', name):
+        names.append(name)
+
+print(names)
