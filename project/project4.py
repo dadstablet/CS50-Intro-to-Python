@@ -28,6 +28,7 @@ for composer in text_list:
         # life_test.append(life.group(1))
         composers.update({name:life})
 
+print(composers)
 #if life in era. return composer
 eras = {
     Medieval : '500-1400',
@@ -39,4 +40,3 @@ eras = {
     Postmodernist : '1930-2026'
 }
 
-print(composers)
