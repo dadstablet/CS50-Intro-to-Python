@@ -32,7 +32,7 @@ for composer in text_list:
         df = name + birth + death + ""
         # append({"name":name, "birth_year":birth, "death_year":death})
 # df = pd.DataFrame(data=d)
-df
+print(grouping.groups())
 
 #if life in era. return composer
 # eras = {
