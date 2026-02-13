@@ -10,6 +10,7 @@ print(text.prettify())
 
 #next steps: return eras, create list of composers based on eras
 #composers aren't in wikitable, rather a bulletted list under designated era
+# looks like composers are always within <a> COMPOSER </a>
 
 # eras = text.find_all('h2') #maybe add id=input of user
 # # eras = text.find_all(class_='mw-heading mw-heading2')
