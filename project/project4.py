@@ -30,8 +30,11 @@ for composer in text_list:
         grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
         name, birth, death= grouping.groups()
         df.loc[len(df)] = [name,birth,death,""]
-        
 print(df)
+
+def categorize_composer(x,y):
+    if 1400 > x > 1600:
+        return "Renaissance"
 
 #if life in era. return composer
 # eras = {
