@@ -9,4 +9,5 @@ text = BeautifulSoup(wiki_html, 'html.parser')
 # print(text.prettify())
 print(text.get_text())
 
-#next step: determine how eras are separated via html. return eras
+#next steps: return eras, create list of composers based on eras
+
