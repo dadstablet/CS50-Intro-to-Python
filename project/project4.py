@@ -14,7 +14,8 @@ text_list = text.splitlines()
 composers = {}
 for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
-        composers.update(composer.)
+        # composers.update(composer.)
+        life = re.search(r' \(\d{4}–\d{4}\)$', composer)
 
 
 #separate names and period of life
