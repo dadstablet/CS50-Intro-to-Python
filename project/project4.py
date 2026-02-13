@@ -28,4 +28,6 @@ for composer in text_list:
         # life_test.append(life.group(1))
         composers.update({name:life})
 
+#if life in era. return composer
+
 print(composers)
