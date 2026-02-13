@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import wikipedia
 import re
 import pandas as pd
-
+import datetime
 
 wiki = wikipedia.WikipediaPage('List of Classical-era composers')
 wiki_html = wiki.html()
@@ -32,9 +32,19 @@ for composer in text_list:
         df.loc[len(df)] = [name,birth,death,""]
 print(df)
 
-def categorize_composer(x,y):
-    if 1400 > x > 1600:
+def categorize_era(x):
+    if 1400 <= x <= 1600:
         return "Renaissance"
+    elif 1600 <= x <= 1760:
+        return "Baroque"
+    elif 1730 <= x <= 1760:
+        return "Classical"
+    elif 1815 <= x <= 1910:
+        return "Romantic"
+    elif 1890 <= x <= 1950:
+        return "Modernist"
+    elif 1930 <= x <= datetime.date.today():
+        return "Postmodernist"
 
 #if life in era. return composer
 # eras = {
