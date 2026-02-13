@@ -1,6 +1,6 @@
 import wikipedia
 
-wiki = wikipedia.page('List of Classical-era composers')
+wiki = wikipedia.WikipediaPage('List of Classical-era composers')
 
 # Extract the plain text content of the page, excluding images, tables, and other data.
 text = wiki.content
