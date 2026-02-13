@@ -11,9 +11,10 @@ text = text.get_text()
 
 text_list = text.splitlines()
 
-names = []
-for name in text_list:
-    if re.search(r' \(\d{4}–\d{4}\)$', name):
-        names.append(name)
+composers = {}
+for composer in text_list:
+    if re.search(r' \(\d{4}–\d{4}\)$', composer):
+        composers.update(composer.)
 
-print(names)
+
+#separate names and period of life
