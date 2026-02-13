@@ -20,17 +20,18 @@ for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
         # composers.update(composer.)
         # life = re.search(r'\((\d{4})–(\d{4})\)$', composer)
-        grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
-        name, birth, death= grouping.groups()
         # name.strip('\xa0[de]')
         # life = re.search(r'\((\d{4}–\d{4})\)', composer)
         # life = life.group(1)
         # name = re.search(r'([\D]+ )', composer)
         # name = name.group(1).strip()
         # life_test.append(life.group(1))
-        life_test.append(death)
+        grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
+        name, birth, death= grouping.groups()
+        d = {"name":name, "birth_year":birth, "death_year":death}
+df = pd.DataFrame(data=d)
+df
 
-print(life_test)
 #if life in era. return composer
 # eras = {
 #     Medieval : '500-1400',
