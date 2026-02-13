@@ -6,6 +6,7 @@ wiki = wikipedia.WikipediaPage('List of Classical-era composers')
 wiki_html = wiki.html()
 
 text = BeautifulSoup(wiki_html, 'html.parser')
-print(text.prettify())
+# print(text.prettify())
+print(text.get_text())
 
 #next step: determine how eras are separated via html. return eras
