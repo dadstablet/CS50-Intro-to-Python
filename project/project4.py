@@ -17,9 +17,9 @@ for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
         # composers.update(composer.)
         # life = re.search(r'\((\d{4})–(\d{4})\)$', composer)
-        life = re.search(r'\((\d{4}–\d{4})\)', composer.strip("'",'"'))
+        life = re.search(r'\((\d{4}–\d{4})\)', composer)
         life = life.group(1)
-        name = re.search(r'([A-Za-z ]+)', composer.strip("'",'"'))
+        name = re.search(r'([A-Za-z ]+)', composer)
         name = name.group(1)
         # life_test.append(life.group(1))
         composers.update({name:life})
