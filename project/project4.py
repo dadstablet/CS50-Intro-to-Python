@@ -17,10 +17,12 @@ for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
         # composers.update(composer.)
         # life = re.search(r'\((\d{4})–(\d{4})\)$', composer)
-        life = re.search(r'\((\d{4}–\d{4})\)', composer)
-        life = life.group(1)
-        name = re.search(r'([\D]+ )', composer)
-        name = name.group(1).strip()
+        grouping = re.search(r'([\D]+) \((\d{4}–\d{4})\)', composer)
+        name, life = grouping.groups()
+        # life = re.search(r'\((\d{4}–\d{4})\)', composer)
+        # life = life.group(1)
+        # name = re.search(r'([\D]+ )', composer)
+        # name = name.group(1).strip()
         # life_test.append(life.group(1))
         composers.update({name:life})
 
