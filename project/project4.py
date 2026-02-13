@@ -29,7 +29,7 @@ for composer in text_list:
         # life_test.append(life.group(1))
         grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
         name, birth, death= grouping.groups()
-        df.concat({"name":name, "birth_year":birth, "death_year":death})
+        pd.concat({"name":name, "birth_year":birth, "death_year":death})
 df = pd.DataFrame(data=d)
 df
 
