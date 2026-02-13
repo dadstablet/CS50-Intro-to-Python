@@ -8,6 +8,5 @@ text = BeautifulSoup(wiki_html, 'html.parser')
 # print(text.prettify())
 text = text.get_text()
 
-list_of_page = []
-for /n in text:
-    list_of_page.append
+# list_of_page = []
+print(text.splitlines())
