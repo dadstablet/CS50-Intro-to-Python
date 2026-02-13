@@ -3,6 +3,7 @@ import wikipedia
 import re
 import pandas as pd
 import datetime
+import random
 
 wiki = wikipedia.WikipediaPage('List of Classical-era composers')
 wiki_html = wiki.html()
@@ -43,4 +44,8 @@ def categorize_era(x):
         return "Modernist"
     elif 1930 <= x <= datetime.date.today():
         return "Postmodernist"
+
+#prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
+
+def return_composer():
 
