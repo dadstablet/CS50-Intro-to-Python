@@ -50,5 +50,5 @@ def categorize_era(x):
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
-def return_composer():
+# def return_composer():
 
