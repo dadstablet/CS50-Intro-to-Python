@@ -15,7 +15,7 @@ text = text.get_text()
 text_list = text.splitlines()
 
 #separate names and period of life
-composers = pd.DataFrame(columns=["name", "birth_year", "death_year", "period"])
+composers = pd.DataFrame(columns=['name', 'birth_year', 'death_year', 'period'])
 for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
         grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
