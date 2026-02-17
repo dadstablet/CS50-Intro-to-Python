@@ -24,11 +24,11 @@ for composer in text_list:
 # print(composers)
 
 def categorize_era(x):
-    if 1600 <= x <= 1760:
+    if 1600 <= int(x) <= 1760:
         return "Baroque"
-    elif 1730 <= x <= 1760:
+    elif 1730 <= int(x) <= 1760:
         return "Classical"
-    elif 1815 <= x <= 1910:
+    elif 1815 <= int(x) <= 1910:
         return "Romantic"
 
 #now categorize composer period given birth and death dates. add era as a column of type list to table
