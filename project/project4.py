@@ -46,7 +46,7 @@ def categorize_era(x):
 
 era_list = []
 for r in composers:
-    era_list.append(categorize_era(composers['birth_year']))
+    era_list.append(categorize_era(composers))
 # composers['period'] = composers.apply(categorize_era, axis=1)
 # print(composers)
 print(era_list)
