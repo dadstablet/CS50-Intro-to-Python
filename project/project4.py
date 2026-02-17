@@ -40,10 +40,6 @@ def categorize_era(x):
         return "Classical"
     elif 1815 <= x <= 1910:
         return "Romantic"
-    # elif 1890 <= x <= 1950:
-    #     return "Modernist"
-    # elif 1930 <= x <= datetime.date.today():
-    #     return "Postmodernist"
 
 #now categorize composer period given birth and death dates. add era as a column of type list to table
 #look through all birth dates. append era to era list (empty list)
