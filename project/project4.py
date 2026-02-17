@@ -36,7 +36,7 @@ def categorize_era(x):
 #look through all death dates. append era to era list if era does not exist already in list
 
 era_list = []
-composers['period'] = categorize_era(composers['birth_year'])
+composers['period'] = composers.apply(categorize_era, axis=1)
 print(composers)
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
