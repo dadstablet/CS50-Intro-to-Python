@@ -35,7 +35,7 @@ composers['death_year'] = pd.to_numeric(composers['death_year'], downcast='integ
 def categorize_era(x):
     if 1600 <= x['birth_year'] <= 1760:
         return "Baroque"
-    elif 1730 <= x['birth_year'] <= 1760:
+    elif 1730 <= x['birth_year'] <= 1820:
         return "Classical"
     elif 1815 <= x['birth_year'] <= 1910:
         return "Romantic"
