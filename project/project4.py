@@ -46,6 +46,7 @@ def categorize_era(x):
 #look through all death dates. append era to era list if era does not exist already in list
 
 era_list = []
+for index, row in df.iterrows():
 
 
 
