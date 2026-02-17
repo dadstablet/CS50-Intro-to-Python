@@ -24,21 +24,21 @@ for composer in text_list:
 composers['birth_year'] = pd.to_numeric(composers['birth_year'], downcast='integer', errors='coerce')
 composers['death_year'] = pd.to_numeric(composers['death_year'], downcast='integer', errors='coerce')
 
-def categorize_era(x):
-    if 1600 <= int(x) <= 1760:
-        return "Baroque"
-    elif 1730 <= int(x) <= 1760:
-        return "Classical"
-    elif 1815 <= int(x) <= 1910:
-        return "Romantic"
-
 # def categorize_era(x):
-#     if 1600 <= x['birth_year'] <= 1760:
+#     if 1600 <= int(x) <= 1760:
 #         return "Baroque"
-#     elif 1730 <= x['birth_year'] <= 1760:
+#     elif 1730 <= int(x) <= 1760:
 #         return "Classical"
-#     elif 1815 <= x['birth_year'] <= 1910:
+#     elif 1815 <= int(x) <= 1910:
 #         return "Romantic"
+
+def categorize_era(x):
+    if 1600 <= x['birth_year'] <= 1760:
+        return "Baroque"
+    elif 1730 <= x['birth_year'] <= 1760:
+        return "Classical"
+    elif 1815 <= x['birth_year'] <= 1910:
+        return "Romantic"
 
 #now categorize composer period given birth and death dates. add era as a column of type list to table
 #look through all birth dates. append era to era list (empty list)
