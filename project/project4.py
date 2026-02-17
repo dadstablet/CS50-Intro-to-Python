@@ -45,6 +45,9 @@ def categorize_era(x):
     elif 1930 <= x <= datetime.date.today():
         return "Postmodernist"
 
+#now categorize composer period given birth and death dates. add era as a column of type list to table
+
+
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
 def return_composer():
