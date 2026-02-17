@@ -37,8 +37,8 @@ def categorize_era(x):
 
 era_list = []
 for r in composers.itertuples(index=False):
-    era_list.append(cateogrize_era(composers['birth_year']))
-
+    era_list.append(categorize_era(int(composers['birth_year']))
+print(era_list)
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
