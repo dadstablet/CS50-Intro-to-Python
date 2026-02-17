@@ -21,7 +21,7 @@ for composer in text_list:
         grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
         name, birth, death= grouping.groups()
         composers.loc[len(composers)] = [name,birth,death,""] #need to convert birth and death into int. right now strs
-composers = pd.to_numeric(composers, errors='coerce').astype)('Int64')
+composers.birth_year = pd.to_numeric(composers, errors='coerce').astype('Int64')
 
 # def categorize_era(x):
 #     if 1600 <= int(x) <= 1760:
