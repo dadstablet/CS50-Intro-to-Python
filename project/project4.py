@@ -46,7 +46,8 @@ def categorize_era(x):
     #     return "Postmodernist"
 
 #now categorize composer period given birth and death dates. add era as a column of type list to table
-
+#look through all birth dates. append era to era list (empty list)
+#look through all death dates. append era to era list if era does not exist already in list
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
