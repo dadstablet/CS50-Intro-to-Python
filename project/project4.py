@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import wikipedia
 import re
 import pandas as pd
-import datetime
 import random
+import datetime
 
 wiki = wikipedia.WikipediaPage('List of Classical-era composers')
 wiki_html = wiki.html()
@@ -23,7 +23,9 @@ for composer in text_list:
         composers.loc[len(composers)] = [name,birth,death,""] #need to convert birth and death into int. right now strs
 composers['birth_year'].astype(int)
 composers['death_year'].astype(int)
-print(type(composers[['birth_year', 'death_year']]))
+
+datatypes = composers.dtypes
+print(datatypes)
 
 # def categorize_era(x):
 #     if 1600 <= int(x) <= 1760:
