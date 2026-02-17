@@ -22,7 +22,8 @@ for composer in text_list:
         name, birth, death= grouping.groups()
         composers.loc[len(composers)] = [name,birth,death,""] #need to convert birth and death into int. right now strs
 composers['birth_year'].astype(int)
-print(composers)
+composers['death_year'].astype(int)
+print(type(composers[['birth_year', 'death_year']]))
 
 # def categorize_era(x):
 #     if 1600 <= int(x) <= 1760:
