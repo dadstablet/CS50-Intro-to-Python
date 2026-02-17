@@ -15,23 +15,13 @@ text = text.get_text()
 text_list = text.splitlines()
 
 #separate names and period of life
-composers = {}
-life_test = list()
-df = pd.DataFrame(columns=["name", "birth_year", "death_year", "period"])
+composers = pd.DataFrame(columns=["name", "birth_year", "death_year", "period"])
 for composer in text_list:
     if re.search(r' \(\d{4}–\d{4}\)$', composer):
-        # composers.update(composer.)
-        # life = re.search(r'\((\d{4})–(\d{4})\)$', composer)
-        # name.strip('\xa0[de]')
-        # life = re.search(r'\((\d{4}–\d{4})\)', composer)
-        # life = life.group(1)
-        # name = re.search(r'([\D]+ )', composer)
-        # name = name.group(1).strip()
-        # life_test.append(life.group(1))
         grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
         name, birth, death= grouping.groups()
-        df.loc[len(df)] = [name,birth,death,""]
-print(df)
+        composers.loc[len(composers)] = [name,birth,death,""]
+# print(composers)
 
 def categorize_era(x):
     if 1600 <= x <= 1760:
@@ -46,8 +36,8 @@ def categorize_era(x):
 #look through all death dates. append era to era list if era does not exist already in list
 
 era_list = []
-for index, row in df.iterrows():
-
+birth_death = composers[['birth_year', 'death_year']]
+print(birth_death.head())
 
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
