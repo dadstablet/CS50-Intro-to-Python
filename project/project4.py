@@ -46,11 +46,11 @@ for index, row in composers.iterrows():
     else:
         pass
 
-print(composers[[composers['death_year']==1817]])
+# print(composers[composers['death_year']==1817])
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
-# select = input("Baroque, Classical, or Romantic? ")
+select_period = input("Baroque, Classical, or Romantic? ")
 
 
 # def return_composer():
