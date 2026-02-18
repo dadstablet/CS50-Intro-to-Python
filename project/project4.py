@@ -51,7 +51,8 @@ for index, row in composers.iterrows():
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
 select_period = input("Baroque, Classical, or Romantic? ")
-print(composers[composers['period'] == select_period])
-
+if select_period in composers['period']:
+    print(composers['name'])
+    
 # def return_composer():
 
