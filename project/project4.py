@@ -28,7 +28,7 @@ composers['period'] = [[] for _ in range(len(composers))]
 def categorize_era(x):
     if 1600 <= int(x) <= 1760:
         return "Baroque"
-    elif 1730 <= int(x) <= 1760:
+    elif 1730 <= int(x) <= 1820:
         return "Classical"
     elif 1815 <= int(x) <= 1910:
         return "Romantic"
@@ -54,12 +54,10 @@ def categorize_era(x):
 # composers['period'] = composers['death_year'].apply(categorize_era)
 
 for index, row in composers.iterrows():
-    era_list = list()
-    era_list.append(categorize_era(row['birth_year']))
-    era_list.append(categorize_era(row['death_year']))
-    row['period'] = era_list
+    row['period'].append(categorize_era(row['birth_year']))
+    row['period'].append(categorize_era(row['death_year']))
 
-print(composers['period'].head())
+print(composers)
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
