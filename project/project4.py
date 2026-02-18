@@ -57,7 +57,7 @@ for index, row in composers.iterrows():
     era_list = list()
     era_list.append(categorize_era(row['birth_year']))
     era_list.append(categorize_era(row['death_year']))
-    composers['period'] = era_list
+    row['period'] = era_list
 
 print(composers)
 
