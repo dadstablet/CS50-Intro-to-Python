@@ -35,11 +35,12 @@ composers['death_year'] = pd.to_numeric(composers['death_year'], downcast='integ
 def categorize_era(x):
     era_tuple = tuple()
     if 1600 <= x <= 1760:
-        era_tuple += 'Baroque'
+        era_tuple += ('Baroque',)
     elif 1730 <= x <= 1820:
-        era_tuple += 'Classical'
+        era_tuple += ('Classical',)
     elif 1815 <= x <= 1910:
-        era_tuple += 'Romantic'
+        era_tuple += ('Romantic',)
+    return era_tuple
 
 #now categorize composer period given birth and death dates. add era as a column of type list to table
 #look through all birth dates. append era to era list (empty list)
