@@ -45,8 +45,7 @@ def categorize_era(x):
 #look through all death dates. append era to era list if era does not exist already in list
 
 era_list = []
-for r in composers:
-    era_list.append(categorize_era(composers))
+ara_list = composers['birth_year'].tolist()
 # composers['period'] = composers.apply(categorize_era, axis=1)
 # print(composers)
 print(era_list)
