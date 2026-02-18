@@ -46,7 +46,7 @@ for index, row in composers.iterrows():
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
-
+select = input(")
 
 # def return_composer():
 
