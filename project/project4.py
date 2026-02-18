@@ -32,16 +32,15 @@ composers['death_year'] = pd.to_numeric(composers['death_year'], downcast='integ
 #     elif 1815 <= int(x) <= 1910:
 #         return "Romantic"
 
-def categorize_era(x,y):
-    era_list = list()
+def categorize_era(x):
+    era_tuple = tuple()
     if 1600 <= x <= 1760:
-        era_list.append('Baroque')
+        era_tuple += ('Baroque',)
     elif 1730 <= x <= 1820:
-        era_list.append('Classical')
+        era_tuple += ('Classical',)
     elif 1815 <= x <= 1910:
-        era_list.append('Romantic')
-
-        pass
+        era_tuple += ('Romantic',)
+    return era_tuple
 
 #now categorize composer period given birth and death dates. add era as a column of type list to table
 #look through all birth dates. append era to era list (empty list)
@@ -49,8 +48,8 @@ def categorize_era(x,y):
 
 # era_list = []
 # era_list = categorize_era(composers)
-composers['period'] = composers.apply(categorize_era(composers['birth_year'], composers['death_year']))
-# print(composers)
+composers['period'] = composers['birth_year'].apply(categorize_era)
+composers['period'] = composers['death_year'].apply(categorize_era)
 print(composers)
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
