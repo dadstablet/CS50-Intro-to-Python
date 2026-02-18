@@ -23,7 +23,7 @@ for composer in text_list:
         composers.loc[len(composers)] = [name,birth,death,""] #need to convert birth and death into int. right now strs
 composers['birth_year'] = pd.to_numeric(composers['birth_year'], downcast='integer', errors='coerce')
 composers['death_year'] = pd.to_numeric(composers['death_year'], downcast='integer', errors='coerce')
-composers['period'].tolist()
+composers['period'] = [[] for _ in range(len(composers))]
 
 def categorize_era(x):
     if 1600 <= int(x) <= 1760:
