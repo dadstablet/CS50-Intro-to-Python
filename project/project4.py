@@ -52,7 +52,7 @@ def categorize_era(x):
 # composers['period'] = composers['birth_year'].apply(categorize_era)
 # composers['period'] = composers['death_year'].apply(categorize_era)
 
-for index, r in composers.iterrows():
+for index, row in composers.iterrows():
     era_list = list()
     era_list.append(categorize_era(composers['birth_year']))
     era_list.append(categorize_era(composers['death_year']))
