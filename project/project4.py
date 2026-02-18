@@ -24,23 +24,23 @@ for composer in text_list:
 composers['birth_year'] = pd.to_numeric(composers['birth_year'], downcast='integer', errors='coerce')
 composers['death_year'] = pd.to_numeric(composers['death_year'], downcast='integer', errors='coerce')
 
-# def categorize_era(x):
-#     if 1600 <= int(x) <= 1760:
-#         return "Baroque"
-#     elif 1730 <= int(x) <= 1760:
-#         return "Classical"
-#     elif 1815 <= int(x) <= 1910:
-#         return "Romantic"
-
 def categorize_era(x):
-    era_tuple = tuple()
-    if 1600 <= x <= 1760:
-        era_tuple += ('Baroque',)
-    elif 1730 <= x <= 1820:
-        era_tuple += ('Classical',)
-    elif 1815 <= x <= 1910:
-        era_tuple += ('Romantic',)
-    return era_tuple
+    if 1600 <= int(x) <= 1760:
+        return "Baroque"
+    elif 1730 <= int(x) <= 1760:
+        return "Classical"
+    elif 1815 <= int(x) <= 1910:
+        return "Romantic"
+
+# def categorize_era(x):
+#     era_tuple = tuple()
+#     if 1600 <= x <= 1760:
+#         era_tuple += ('Baroque',)
+#     elif 1730 <= x <= 1820:
+#         era_tuple += ('Classical',)
+#     elif 1815 <= x <= 1910:
+#         era_tuple += ('Romantic',)
+#     return era_tuple
 
 #now categorize composer period given birth and death dates. add era as a column of type list to table
 #look through all birth dates. append era to era list (empty list)
@@ -48,8 +48,16 @@ def categorize_era(x):
 
 # era_list = []
 # era_list = categorize_era(composers)
-composers['period'] = composers['birth_year'].apply(categorize_era)
-composers['period'] = composers['death_year'].apply(categorize_era)
+
+# composers['period'] = composers['birth_year'].apply(categorize_era)
+# composers['period'] = composers['death_year'].apply(categorize_era)
+
+for r in composers:
+    era_list = list()
+    era_list.append(categorize_era(composers['birth_year']))
+    era_list.append(categorize_era(composers['death_year']))
+    composers['period'] = era_list
+
 print(composers)
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
