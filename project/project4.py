@@ -43,7 +43,6 @@ for index, row in composers.iterrows():
     row['period'].append(categorize_era(row['birth_year']))
     row['period'].append(categorize_era(row['death_year']))
 
-print(composers[composers['death_year']==1817])
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
