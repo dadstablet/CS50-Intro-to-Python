@@ -59,7 +59,7 @@ for index, row in composers.iterrows():
     era_list.append(categorize_era(row['death_year']))
     row['period'] = era_list
 
-print(composers)
+print(composers['period'].head())
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 
