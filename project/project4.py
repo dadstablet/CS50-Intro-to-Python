@@ -52,7 +52,8 @@ for index, row in composers.iterrows():
 
 select_period = input("Baroque, Classical, or Romantic? ")
 selected_composers = composers[composers['period'].apply(lambda x: select_period in x)]
-print(selected_composers['name'].sample(3).values)
+rand_comps = selected_composers['name'].sample(3).values
+print(f'Try out {rand_comps[0]}, {rand_comps[1]}, {rand_comps[2]}')
 
 # def return_composer():
 
