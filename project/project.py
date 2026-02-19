@@ -60,7 +60,7 @@ def main():
 def select_period(x):
     baroque_list = ['Bach', 'Vivaldi']
     classical_list = ['Mozart', 'Beethoven']
-    romatic_list = ['Liszt', 'Chopin', 'Rachmaninoff']
+    romatic_list = ['Liszt', 'Chopin', 'Rachmaninoff', 'Tchaikovsky', 'Brahms']
 
 if __name__ == '__main__':
     main()
