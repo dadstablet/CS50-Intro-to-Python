@@ -5,6 +5,7 @@ import pandas as pd
 import random
 import datetime
 
+def get_wiki_table
 wiki = wikipedia.WikipediaPage('List of Classical-era composers')
 wiki_html = wiki.html()
 
@@ -51,11 +52,12 @@ for index, row in composers.iterrows():
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 def main():
     select_period = input("Baroque, Classical, or Romantic? ")
+    return_composers(select_period)
 
 def return_composers(c):
-    selected_composers = composers[composers['period'].apply(lambda x: select_period in x)]
+    selected_composers = composers[composers['period'].apply(lambda x: c in x)]
     rand_comps = selected_composers['name'].sample(3).values
     return f'Try out {rand_comps[0]}, {rand_comps[1]}, {rand_comps[2]}'
 
 
-
+main()
