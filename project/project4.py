@@ -9,8 +9,7 @@ def get_composer_table():
     wiki = wikipedia.WikipediaPage('List of Classical-era composers')
     wiki_html = wiki.html()
     text = BeautifulSoup(wiki_html, 'html.parser') #using BS to read the html provided by wikipedia method
-    text = text.get_text()
-    text_list = text.splitlines() #since in bulletted list on wikipage, use /n to know where composer data end/begin
+    text_list = text.get_text().splitlines() #since in bulletted list on wikipage, use /n to know where composer data end/begin
 
     composers = pd.DataFrame(columns=['name', 'birth_year', 'death_year', 'period'])
 
