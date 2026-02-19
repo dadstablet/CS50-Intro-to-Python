@@ -2,7 +2,8 @@ from project import get_composer_table, categorize_era, select_period
 import pytest
 
 def test_get_composer_table():
-    assert get_composer_table() == False
+    get_composer_table() == composers
+    assert composers
 
 def test_categorize_era():
     assert categorize_era(1600) == 'Baroque'
@@ -13,3 +14,4 @@ def test_select_period():
     assert select_period('Bach') == 'Baroque'
     assert select_period('Romantic') == 'Romantic'
     assert select_period('hello world') == ValueError
+    assert select_period('clAssIcal') == 'Classical'
