@@ -3,8 +3,9 @@ import wikipedia
 import re
 import pandas as pd
 
-#create table based on wikipedia page
+
 def get_composer_table():
+    """create table based on wikipedia page"""
     wiki = wikipedia.WikipediaPage('List of Classical-era composers')
     wiki_html = wiki.html()
 
