@@ -54,6 +54,7 @@ def main():
             selected_composers = composers[composers['period'].apply(lambda x: select_period in x)]
             rand_comps = selected_composers['name'].sample(3).values
             print(f'Try out {rand_comps[0]}, {rand_comps[1]}, or {rand_comps[2]}')
+            break
         except ValueError:
             pass
 
