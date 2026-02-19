@@ -46,6 +46,7 @@ def main():
     """prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period"""
     composers = get_composer_table()
 
+def suggest_composers(x):
     while True: #use a loop that breaks once correct input is provided
         try:
             select_period = input('Baroque, Classical, or Romantic? ').capitalize()
