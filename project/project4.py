@@ -2,30 +2,39 @@ from bs4 import BeautifulSoup
 import wikipedia
 import re
 import pandas as pd
-import random
-import datetime
 
-def get_wiki_table
-wiki = wikipedia.WikipediaPage('List of Classical-era composers')
-wiki_html = wiki.html()
+#create table based on wikipedia page
+def get_composer_table():
+    wiki = wikipedia.WikipediaPage('List of Classical-era composers')
+    wiki_html = wiki.html()
 
-text = BeautifulSoup(wiki_html, 'html.parser')
-# print(text.prettify())
-text = text.get_text()
+    text = BeautifulSoup(wiki_html, 'html.parser')
+    # print(text.prettify())
+    text = text.get_text()
+    text_list = text.splitlines()
+    #separate names and period of life
+    composers = pd.DataFrame(columns=['name', 'birth_year', 'death_year', 'period'])
+    for composer in text_list:
+        if re.search(r' \(\d{4}–\d{4}\)$', composer):
+            grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
+            name, birth, death= grouping.groups()
+            composers.loc[len(composers)] = [name,birth,death,""] #need to convert birth and death into int. right now strs
+    composers['birth_year'] = pd.to_numeric(composers['birth_year'], downcast='integer', errors='coerce')
+    composers['death_year'] = pd.to_numeric(composers['death_year'], downcast='integer', errors='coerce')
+    composers['period'] = [[] for _ in range(len(composers))]
+    # return composers
 
-text_list = text.splitlines()
+    """
+    now categorize composer period(s) given birth and death dates.
+    """
+    for index, row in composers.iterrows():
+    row['period'].append(categorize_era(row['birth_year']))
+    if categorize_era(row['death_year']) not in row['period']:
+        row['period'].append(categorize_era(row['death_year']))
+    else:
+        pass
 
-#separate names and period of life
-composers = pd.DataFrame(columns=['name', 'birth_year', 'death_year', 'period'])
-for composer in text_list:
-    if re.search(r' \(\d{4}–\d{4}\)$', composer):
-        grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #need to remove \xa0[de] from name
-        name, birth, death= grouping.groups()
-        composers.loc[len(composers)] = [name,birth,death,""] #need to convert birth and death into int. right now strs
-composers['birth_year'] = pd.to_numeric(composers['birth_year'], downcast='integer', errors='coerce')
-composers['death_year'] = pd.to_numeric(composers['death_year'], downcast='integer', errors='coerce')
-composers['period'] = [[] for _ in range(len(composers))]
-
+#create function to 'classify' the period(s) of composer
 def categorize_era(x):
     if 1600 <= int(x) <= 1760:
         return "Baroque"
@@ -34,18 +43,6 @@ def categorize_era(x):
     elif 1815 <= int(x) <= 1910:
         return "Romantic"
 
-
-#now categorize composer period given birth and death dates. add era as a column of type list to table
-#look through all birth dates. append era to era list (empty list)
-#look through all death dates. append era to era list if era does not exist already in list
-
-
-for index, row in composers.iterrows():
-    row['period'].append(categorize_era(row['birth_year']))
-    if categorize_era(row['death_year']) not in row['period']:
-        row['period'].append(categorize_era(row['death_year']))
-    else:
-        pass
 
 # print(composers[composers['death_year']==1817])
 
@@ -60,4 +57,5 @@ def return_composers(c):
     return f'Try out {rand_comps[0]}, {rand_comps[1]}, {rand_comps[2]}'
 
 
-main()
+
+get_composer_table()
