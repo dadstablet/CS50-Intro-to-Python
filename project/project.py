@@ -57,9 +57,10 @@ def main():
         except ValueError:
             pass
 
-def select_period():
-    x = input('Baroque, Classical, or Romantic? ').capitalize()
-    if x 
+def select_period(x):
+    baroque_list = ['Bach', 'Vivaldi']
+    classical_list = ['Mozart', 'Beethoven']
+    romatic_list = ['Liszt', 'Chopin', 'Rachmaninoff']
 
 if __name__ == '__main__':
     main()
