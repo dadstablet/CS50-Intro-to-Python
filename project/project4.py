@@ -45,9 +45,9 @@ def categorize_era(x):
 def main():
     """prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period"""
     composers = get_composer_table()
-    select_period()
+    select_period(composers)
 
-def select_period(composers=table):
+def select_period(composers: pd.DataFrame):
     user_input = input('Baroque, Classical, or Romantic? ').capitalize()
     try:
         selected_composers = composers[composers['period'].apply(lambda x: user_input in x)]
