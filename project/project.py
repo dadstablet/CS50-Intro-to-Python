@@ -49,7 +49,7 @@ def main():
 
     while True: #use a loop that breaks once correct input is provided
         try:
-            select_period = input('Baroque, Classical, or Romantic? ').capitalize()
+            select_period = input('Baroque, Classical, or Romantic? ').cap
             selected_composers = composers[composers['period'].apply(lambda x: select_period in x)]
             rand_comps = selected_composers['name'].sample(3).values
             print(f'Try out {rand_comps[0]}, {rand_comps[1]}, or {rand_comps[2]}')
@@ -58,9 +58,14 @@ def main():
             pass
 
 def select_period(x):
-    baroque_list = ['Bach', 'Vivaldi']
-    classical_list = ['Mozart', 'Beethoven']
-    romatic_list = ['Liszt', 'Chopin', 'Rachmaninoff', 'Tchaikovsky', 'Brahms']
+    if x in ['Baroque', 'Bach', 'Vivaldi']:
+        return 'Baroque'
+    elif x in ['Classical', 'Mozart', 'Beethoven']:
+        return 'Classical'
+    elif x in ['Romantic', 'Liszt', 'Chopin', 'Rachmaninoff', 'Tchaikovsky', 'Brahms']:
+        return 'Romantic'
+    else:
+        return x
 
 if __name__ == '__main__':
     main()
