@@ -49,10 +49,13 @@ def main():
     #use a loop that breaks once correct input is provided
 
     while True:
-        select_period = input('Baroque, Classical, or Romantic? ')
-        selected_composers = composers[composers['period'].apply(lambda x: select_period in x)]
-        rand_comps = selected_composers['name'].sample(3).values
-        print(f'Try out {rand_comps[0]}, {rand_comps[1]}, or {rand_comps[2]}')
+        try:
+            select_period = input('Baroque, Classical, or Romantic? ')
+            selected_composers = composers[composers['period'].apply(lambda x: select_period in x)]
+            rand_comps = selected_composers['name'].sample(3).values
+            print(f'Try out {rand_comps[0]}, {rand_comps[1]}, or {rand_comps[2]}')
+        except ValueError:
+            pass
 
 if __name__ == '__main__':
     main()
