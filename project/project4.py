@@ -10,10 +10,10 @@ def get_composer_table():
     wiki_html = wiki.html()
     text = BeautifulSoup(wiki_html, 'html.parser') #using BS to read the html provided by wikipedia method
     text = text.get_text()
-    text_list = text.splitlines() #separate names and period of life
+    text_list = text.splitlines() #since in bulletted list on wikipage, use /n to know where composer data end/begin
 
     composers = pd.DataFrame(columns=['name', 'birth_year', 'death_year', 'period'])
-    
+
     for composer in text_list:
         if re.search(r' \(\d{4}–\d{4}\)$', composer): #lines that end in (YYYY-YYYY) are composers
             grouping = re.search(r'([\D]+) \((\d{4})–(\d{4})\)', composer) #capture name, birth_year, and death_year. unable to figure out how to remove \xa0[de] from name
