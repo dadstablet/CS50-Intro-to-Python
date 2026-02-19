@@ -55,5 +55,5 @@ def main():
     print(f'Try out {rand_comps[0]}, {rand_comps[1]}, or {rand_comps[2]}')
 
 
-
-main()
+if __name__ == '__main__':
+    main()
