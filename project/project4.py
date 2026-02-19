@@ -48,14 +48,12 @@ def categorize_era(x):
 
 #prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period
 def main():
+    composers = get_composer_table()
     select_period = input("Baroque, Classical, or Romantic? ")
-    return_composers(select_period)
-
-def return_composers(c):
-    selected_composers = composers[composers['period'].apply(lambda x: c in x)]
+    selected_composers = composers[composers['period'].apply(lambda x: select_period in x)]
     rand_comps = selected_composers['name'].sample(3).values
-    return f'Try out {rand_comps[0]}, {rand_comps[1]}, {rand_comps[2]}'
+    print(f'Try out {rand_comps[0]}, {rand_comps[1]}, or {rand_comps[2]}')
 
 
 
-get_composer_table()
+main()
