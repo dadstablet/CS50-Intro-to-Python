@@ -58,6 +58,7 @@ def main():
             pass
 
 def select_period(x):
+    """possible selection of user inputs that return specified period"""
     if x in ['Baroque', 'Bach', 'Vivaldi']:
         return 'Baroque'
     elif x in ['Classical', 'Mozart', 'Beethoven']:
@@ -65,7 +66,7 @@ def select_period(x):
     elif x in ['Romantic', 'Liszt', 'Chopin', 'Rachmaninoff', 'Tchaikovsky', 'Brahms']:
         return 'Romantic'
     else:
-        return x
+        raise ValueError
 
 if __name__ == '__main__':
     main()
