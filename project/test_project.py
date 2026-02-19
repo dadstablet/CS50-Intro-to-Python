@@ -3,7 +3,8 @@ import pytest
 
 def test_get_composer_table():
     get_composer_table() == composers
-    assert composers
+    assert len(composers) == 669
+    asssert composers
 
 def test_categorize_era():
     assert categorize_era(1600) == 'Baroque'
