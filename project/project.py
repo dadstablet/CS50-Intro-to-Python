@@ -41,7 +41,6 @@ def categorize_era(x):
     elif 1815 <= int(x) <= 1910:
         return 'Romantic'
 
-
 def select_period(x):
     """possible selection of user inputs that return specified period"""
     if x in ['Baroque', 'Bach', 'Vivaldi']:
