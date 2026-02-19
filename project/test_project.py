@@ -2,13 +2,13 @@ from project import get_composer_table, categorize_era, select_period
 import pytest
 
 def test_get_composer_table():
-    get_composer_table() == composers
-    assert len(composers) == 669
-    assert composers['name']
+    get_composer_table() = composers
+    assert len(get_composer_table() ) == 669
+    assert composers['name'].dtype == str
 
 def test_categorize_era():
     assert categorize_era(1600) == 'Baroque'
-    assert cateogirze_era(1735) == 'Baroque'
+    assert cateogorize_era(1735) == 'Baroque'
     assert categorize_era(1815) == 'Classical'
 
 def test_select_period():
