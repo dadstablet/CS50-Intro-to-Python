@@ -40,9 +40,12 @@ def categorize_era(x):
         return 'Classical'
     elif 1815 <= int(x) <= 1910:
         return 'Romantic'
+    else:
+        pass
 
 def select_period(x):
     """possible selection of user inputs that return specified period"""
+    x = x.lower().capitalize()
     if x in ['Baroque', 'Bach', 'Vivaldi']:
         return 'Baroque'
     elif x in ['Classical', 'Mozart', 'Beethoven']:
@@ -57,7 +60,7 @@ def main():
     composers = get_composer_table()
     while True: #use a loop that breaks once correct input is provided
         try:
-            user_input = select_period(input('Baroque, Classical, or Romantic? ').lower().capitalize())
+            user_input = select_period(input('Baroque, Classical, or Romantic? '))
             selected_composers = composers[composers['period'].apply(lambda x: user_input in x)]
             rand_comps = selected_composers['name'].sample(3).values
             print(f'Try out {rand_comps[0]}, {rand_comps[1]}, or {rand_comps[2]}')

@@ -5,8 +5,11 @@ def test_get_composer_table():
     assert get_composer_table() == False
 
 def test_categorize_era():
-    assert categorize_era("0.0.0.0.0") == False
+    assert categorize_era(1600) == 'Baroque'
+    assert cateogirze_era(1735) == 'Baroque'
+    assert categorize_era(1815) == 'Classical'
 
 def test_select_period():
-    assert select_period("260.2.2.2") == False
-    assert select_period("22.9.2.260") == False
+    assert select_period('Bach') == 'Baroque'
+    assert select_period('Romantic') == 'Romantic'
+    assert select_period('hello world') == ValueError
