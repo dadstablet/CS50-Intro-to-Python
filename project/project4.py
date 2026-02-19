@@ -5,15 +5,13 @@ import pandas as pd
 
 
 def get_composer_table():
-    """create table based on wikipedia page"""
+    """create table of composer name, birth, death, and period based on wikipedia page"""
     wiki = wikipedia.WikipediaPage('List of Classical-era composers')
     wiki_html = wiki.html()
-
-    text = BeautifulSoup(wiki_html, 'html.parser')
-    # print(text.prettify())
+    text = BeautifulSoup(wiki_html, 'html.parser') #using BS to read the html provided by wikipedia method
     text = text.get_text()
-    text_list = text.splitlines()
-    #separate names and period of life
+    text_list = text.splitlines() #separate names and period of life
+
     composers = pd.DataFrame(columns=['name', 'birth_year', 'death_year', 'period'])
     for composer in text_list:
         if re.search(r' \(\d{4}–\d{4}\)$', composer):
@@ -24,9 +22,8 @@ def get_composer_table():
     composers['death_year'] = pd.to_numeric(composers['death_year'], downcast='integer', errors='coerce')
     composers['period'] = [[] for _ in range(len(composers))]
 
-    """
-    now categorize composer period(s) given birth and death dates.
-    """
+
+    # now categorize composer period(s) given birth and death dates.
     for index, row in composers.iterrows():
         row['period'].append(categorize_era(row['birth_year']))
         if categorize_era(row['death_year']) not in row['period']:
