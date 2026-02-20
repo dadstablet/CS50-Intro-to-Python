@@ -2,7 +2,9 @@ from project import get_composer_table, categorize_era, select_period
 import pytest
 
 def test_get_composer_table():
+    composers = get_composer_table()
     assert len(get_composer_table()) == 669
+    assert composers['name']
 
 def test_categorize_era():
     assert categorize_era(1600) == 'Baroque'
