@@ -1,3 +1,5 @@
+""" Classical Composer Suggestor """
+
 from bs4 import BeautifulSoup
 import wikipedia
 import re
