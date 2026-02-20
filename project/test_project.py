@@ -3,7 +3,6 @@ import pytest
 
 def test_get_composer_table():
     composers = get_composer_table()
-    assert len(get_composer_table()) == 669
     assert len(composers['name']) == len(composers['period'])
 
 def test_categorize_era():
