@@ -16,9 +16,9 @@ def main():
 def shirt(x, y):
     try:
         with Image.open(x) as reference, Image.open("shirt.png") as shirt:
-            fit_shirt = ImageOps.fit(shirt, reference.size) #fit shirt to size of muppet
-            reference.paste(fit_shirt, (0,0), fit_shirt)
-            reference.save(y)
+            fit_reference = ImageOps.fit(reference, shirt.size) #fit shirt to size of muppet
+            fit_reference.paste(shirt, (0,0), shirt)
+            fit_reference.save(y)
             # print(f"Reference size: {reference.size}")
             # print(f"Original shirt size: {shirt.size}")
             # print(f"Fitted shirt size: {fit_shirt.size}")
