@@ -58,7 +58,7 @@ def select_period(x):
         raise ValueError
 
 def main():
-    """prompt user for period. return random composer in period. if lived in overlap, have chance to be in either period"""
+    """prompt user for period. return random composers in period"""
     composers = get_composer_table()
     while True: #use a loop that breaks once correct input is provided
         try:
