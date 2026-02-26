@@ -1,5 +1,5 @@
 # CS50 Python Coursework!
-##### Mom I'm a Harvard Grad
+##### *Mom I'm a Harvard Grad!*
 #### Lecture 0: Functions, Variables
 #### Lecture 1: Conditionals
 #### Lecture 2: Loops
